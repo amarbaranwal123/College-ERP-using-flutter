@@ -1,6 +1,3 @@
-import 'package:erp/Login.dart';
-import 'package:erp/MyProfile.dart';
-import 'package:erp/NavBar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,6 +5,7 @@ import 'package:sizer/sizer.dart';
 
 import 'ApplicationForm.dart';
 import 'DashBoard.dart';
+import 'MyProfile.dart';
 
 void main() => runApp(MyApp());
 

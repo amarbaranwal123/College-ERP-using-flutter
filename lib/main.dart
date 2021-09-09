@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           ApplicationForm.routeName: (ctx) => ApplicationForm(),
         },
         debugShowCheckedModeBanner: false,
-        home: DashBoard(),
+        home: MyProfile(),
       );
     });
     /* return MaterialApp(

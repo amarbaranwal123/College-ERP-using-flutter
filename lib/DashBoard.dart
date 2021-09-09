@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'NavBar.dart';
@@ -12,12 +14,14 @@ class DashBoard extends StatelessWidget {
       appBar: NewGradientAppBar(
           title: Container(
             height: 9.h,
-            width: 15.h,
+            width: 35.w,
             //color: Colors.black,
-            child: Image.asset(
-              'assets/image/dpu.png',
-              fit: BoxFit.cover,
-              height: 20,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Image.asset(
+                'assets/image/dpu.png',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           gradient: LinearGradient(colors: [
@@ -207,7 +211,7 @@ class DashBoard extends StatelessWidget {
                                                   child: FittedBox(
                                                     fit: BoxFit.contain,
                                                     child: Text(
-                                                      'Mentor allocation not done yet !',
+                                                      'Mrs. Rupali Kalekar',
                                                       style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -424,7 +428,7 @@ class DashBoard extends StatelessWidget {
                   height: 2.5.h,
                 ),
                 Container(
-                  height: 123.5.h,
+                  height: 45.h,
                   //color: Colors.black,
                   width: 100.w,
                   decoration: BoxDecoration(
@@ -441,6 +445,122 @@ class DashBoard extends StatelessWidget {
                         ),
                         blurRadius: 6,
                         spreadRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 5.h,
+                        //color: Colors.black,
+                        width: 100.w,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.blue.shade300,
+                              Colors.blue.shade500,
+                            ],
+                          ),
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                top: MediaQuery.of(context).size.height / 200,
+                                left: MediaQuery.of(context).size.width / 40,
+                              ),
+                              child: Container(
+                                // color: Colors.black,
+                                height: 4.h,
+                                width: 40.w,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: FittedBox(
+                                    fit: BoxFit.contain,
+                                    child: Text(
+                                      "Notices & Circulars",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13.sp),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 2.5.h,
+                ),
+                Container(
+                  height: 45.h,
+                  //color: Colors.black,
+                  width: 100.w,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    gradient: LinearGradient(colors: [
+                      Colors.white,
+                      Colors.white,
+                    ]),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black54,
+                        offset: const Offset(
+                          0.0,
+                          0.0,
+                        ),
+                        blurRadius: 6,
+                        spreadRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 5.h,
+                        //color: Colors.black,
+                        width: 100.w,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.blue.shade300,
+                              Colors.blue.shade500,
+                            ],
+                          ),
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                top: MediaQuery.of(context).size.height / 200,
+                                left: MediaQuery.of(context).size.width / 40,
+                              ),
+                              child: Container(
+                                // color: Colors.black,
+                                height: 4.h,
+                                width: 40.w,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: FittedBox(
+                                    fit: BoxFit.contain,
+                                    child: Text(
+                                      "Attention",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13.sp),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),

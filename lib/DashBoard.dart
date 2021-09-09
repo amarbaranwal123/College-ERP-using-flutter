@@ -34,367 +34,418 @@ class DashBoard extends StatelessWidget {
                 right: MediaQuery.of(context).size.width / 30,
                 bottom: MediaQuery.of(context).size.width / 30,
                 top: MediaQuery.of(context).size.width / 30),
-            child: Container(
-              height: 123.5.h,
-              //color: Colors.black,
-              width: 100.w,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  Colors.white,
-                  Colors.white,
-                ]),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black54,
-                    offset: const Offset(
-                      0.0,
-                      3.0,
-                    ),
-                    blurRadius: 10,
-                    spreadRadius: 4,
-                  ), //BoxShadow
-                  //BoxShadow
-                ],
-              ),
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.width / 12,
-                        right: MediaQuery.of(context).size.width / 12,
-                        bottom: MediaQuery.of(context).size.width / 12,
-                        top: MediaQuery.of(context).size.width / 65),
-                    child: Container(
-                      width: 100.w,
-                      height: 120.h,
-                      //    color: Colors.blue,
-                      child: Stack(
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
+            child: Column(
+              children: [
+                Container(
+                  height: 123.5.h,
+                  //color: Colors.black,
+                  width: 100.w,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.white,
+                      Colors.white,
+                    ]),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black54,
+                        offset: const Offset(
+                          0.0,
+                          0.0,
+                        ),
+                        blurRadius: 6,
+                        spreadRadius: 1,
+                      ), //BoxShadow
+                      //BoxShadow
+                    ],
+                  ),
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width / 12,
+                            right: MediaQuery.of(context).size.width / 12,
+                            bottom: MediaQuery.of(context).size.width / 12,
+                            top: MediaQuery.of(context).size.width / 65),
+                        child: Container(
+                          width: 100.w,
+                          height: 120.h,
+                          //    color: Colors.blue,
+                          child: Stack(
                             children: [
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Container(
-                                  //        color: Colors.yellow,
-                                  decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black38,
-                                        offset: const Offset(
-                                          0.0,
-                                          0.0,
-                                        ),
-                                        blurRadius: 5,
-                                        spreadRadius: .25,
-                                      ), //BoxShadow
-                                      //BoxShadow
-                                    ],
-                                  ),
-                                  height: 22.h,
-                                  width: 38.w,
-                                  child: Center(
-                                    child: Container(
-                                        //color: Colors.red,
-                                        height: 21.h,
-                                        width: 36.w,
-                                        decoration: new BoxDecoration(
-                                            image: new DecorationImage(
-                                          image: new AssetImage(
-                                              "assets/image/Photo.jpg"),
-                                          fit: BoxFit.fill,
-                                        ))),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: .5.h,
-                              ),
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Container(
-                                  // color: Colors.pink,
-                                  height: 3.h,
-                                  width: 38.w,
-                                  child: Align(
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Align(
                                     alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      'Amarnath Baranwal',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14.sp),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: .25.h,
-                              ),
-                              Container(
-                                // color: Colors.yellow,
-                                height: 30.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Colors.yellow.shade100,
-                                      Colors.yellow.shade800,
-                                      Colors.yellow.shade800
-                                    ],
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black54,
-                                      offset: const Offset(
-                                        0.0,
-                                        0.0,
-                                      ),
-                                      blurRadius: 5,
-                                      spreadRadius: .8,
-                                    ), //BoxShadow
-                                    //BoxShadow
-                                  ],
-                                ),
-                                child: Stack(
-                                  children: [
-                                    Center(
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Container(
-                                            height: 4.h,
-                                            width: 40.w,
-
-                                            //           color: Colors.white,
-                                            child: Center(
-                                              child: Text(
-                                                'Mentor Details',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 15.sp),
-                                              ),
+                                    child: Container(
+                                      //        color: Colors.yellow,
+                                      decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black38,
+                                            offset: const Offset(
+                                              0.0,
+                                              0.0,
                                             ),
-                                          ),
-                                          Container(
-                                            height: 12.h,
-                                            width: 30.w,
-                                            color: Colors.white,
-                                          ),
-                                          Container(
-                                            height: 3.h,
-                                            width: 50.w,
-                                            //      color: Colors.white,
-                                            child: Center(
-                                              child: Text(
-                                                'Mentor allocation not done yet !',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 11.5.sp,
-                                                    color: Colors.black54),
-                                              ),
-                                            ),
-                                          )
+                                            blurRadius: 6,
+                                            spreadRadius: 1,
+                                          ), //BoxShadow
+                                          //BoxShadow
                                         ],
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: 2.5.h,
-                              ),
-                              Container(
-                                height: 10.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Colors.lightBlue.shade700,
-                                    Colors.lightBlue.shade700,
-                                  ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black54,
-                                      offset: const Offset(
-                                        0.0,
-                                        0.0,
+                                      height: 22.h,
+                                      width: 38.w,
+                                      child: Center(
+                                        child: Container(
+                                            //color: Colors.red,
+                                            height: 21.h,
+                                            width: 36.w,
+                                            decoration: new BoxDecoration(
+                                                image: new DecorationImage(
+                                              image: new AssetImage(
+                                                  "assets/image/Photo.jpg"),
+                                              fit: BoxFit.fill,
+                                            ))),
                                       ),
-                                      blurRadius: 5,
-                                      spreadRadius: .8,
-                                    ), //BoxShadow
-                                    //BoxShadow
-                                  ],
-                                ),
-                                child: Center(
-                                    child: Text(
-                                  'My Profile OPAC',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 16.sp),
-                                )),
-                              ),
-                              SizedBox(
-                                height: 2.5.h,
-                              ),
-                              Container(
-                                height: 10.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Colors.blue.shade400,
-                                    Colors.blue.shade400,
-                                  ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black54,
-                                      offset: const Offset(
-                                        0.0,
-                                        0.0,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: .5.h,
+                                  ),
+                                  Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Container(
+                                      // color: Colors.pink,
+                                      height: 3.h,
+                                      width: 38.w,
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: FittedBox(
+                                          fit: BoxFit.contain,
+                                          child: Text(
+                                            'Amarnath Baranwal',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.sp),
+                                          ),
+                                        ),
                                       ),
-                                      blurRadius: 5,
-                                      spreadRadius: .8,
-                                    ), //BoxShadow
-                                    //BoxShadow
-                                  ],
-                                ),
-                                child: Center(
-                                    child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
-                                      'Lecture Attendence',
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: .25.h,
+                                  ),
+                                  Container(
+                                    // color: Colors.yellow,
+                                    height: 30.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Colors.yellow.shade100,
+                                          Colors.yellow.shade800,
+                                          Colors.yellow.shade800
+                                        ],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black54,
+                                          offset: const Offset(
+                                            0.0,
+                                            0.0,
+                                          ),
+                                          blurRadius: 1,
+                                          spreadRadius: .25,
+                                        ), //BoxShadow
+                                        //BoxShadow
+                                      ],
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        Center(
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              Container(
+                                                height: 4.h,
+                                                width: 40.w,
+
+                                                //           color: Colors.white,
+                                                child: Center(
+                                                  child: Text(
+                                                    'Mentor Details',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 15.sp),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                height: 12.h,
+                                                width: 30.w,
+                                                //  color: Colors.white,
+                                                child: CircleAvatar(
+                                                  child: ClipOval(
+                                                    child: Image.asset(
+                                                      'assets/image/Rupali.jpg',
+                                                      width: 90,
+                                                      height: 90,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                height: 3.h,
+                                                width: 50.w,
+                                                //      color: Colors.white,
+                                                child: Center(
+                                                  child: FittedBox(
+                                                    fit: BoxFit.contain,
+                                                    child: Text(
+                                                      'Mentor allocation not done yet !',
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 11.5.sp,
+                                                          color:
+                                                              Colors.black54),
+                                                    ),
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 2.5.h,
+                                  ),
+                                  Container(
+                                    height: 10.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        Colors.lightBlue.shade700,
+                                        Colors.lightBlue.shade700,
+                                      ]),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black54,
+                                          offset: const Offset(
+                                            0.0,
+                                            0.0,
+                                          ),
+                                          blurRadius: 1,
+                                          spreadRadius: .25,
+                                        ), //BoxShadow
+                                        //BoxShadow
+                                      ],
+                                    ),
+                                    child: Center(
+                                        child: Text(
+                                      'My Profile OPAC',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 16.sp),
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    height: 2.5.h,
+                                  ),
+                                  Container(
+                                    height: 10.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        Colors.blue.shade400,
+                                        Colors.blue.shade400,
+                                      ]),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black54,
+                                          offset: const Offset(
+                                            0.0,
+                                            0.0,
+                                          ),
+                                          blurRadius: 1,
+                                          spreadRadius: .25,
+                                        ), //BoxShadow
+                                        //BoxShadow
+                                      ],
                                     ),
-                                    Text(
-                                      'Allocated Subjects',
+                                    child: Center(
+                                        child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          'Lecture Attendence',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 16.sp),
+                                        ),
+                                        Text(
+                                          'Allocated Subjects',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 16.sp),
+                                        ),
+                                      ],
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    height: 2.5.h,
+                                  ),
+                                  Container(
+                                    height: 10.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        Colors.blueGrey.shade500,
+                                        Colors.blueGrey.shade500,
+                                      ]),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black54,
+                                          offset: const Offset(
+                                            0.0,
+                                            0.0,
+                                          ),
+                                          blurRadius: 1,
+                                          spreadRadius: .25,
+                                        ), //BoxShadow
+                                        //BoxShadow
+                                      ],
+                                    ),
+                                    child: Center(
+                                        child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          'Library Due Books : 0',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 16.sp),
+                                        ),
+                                        Text(
+                                          'New Arrivals',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 16.sp),
+                                        ),
+                                        Text(
+                                          'Institutional Repository',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 16.sp),
+                                        ),
+                                      ],
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    height: 2.5.h,
+                                  ),
+                                  Container(
+                                    height: 10.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        Colors.green.shade400,
+                                        Colors.green.shade400,
+                                      ]),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black54,
+                                          offset: const Offset(
+                                            0.0,
+                                            0.0,
+                                          ),
+                                          blurRadius: 1,
+                                          spreadRadius: .25,
+                                        ), //BoxShadow
+                                        //BoxShadow
+                                      ],
+                                    ),
+                                    child: Center(
+                                        child: Text(
+                                      'Grievance Redressal',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 16.sp),
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    height: 2.5.h,
+                                  ),
+                                  Container(
+                                    height: 10.h,
+                                    width: 100.w,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        Colors.blueGrey.shade500,
+                                        Colors.blueGrey.shade500,
+                                      ]),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black54,
+                                          offset: const Offset(
+                                            0.0,
+                                            0.0,
+                                          ),
+                                          blurRadius: 1,
+                                          spreadRadius: .25,
+                                        ), //BoxShadow
+                                        //BoxShadow
+                                      ],
                                     ),
-                                  ],
-                                )),
-                              ),
-                              SizedBox(
-                                height: 2.5.h,
-                              ),
-                              Container(
-                                height: 10.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Colors.blueGrey.shade500,
-                                    Colors.blueGrey.shade500,
-                                  ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black54,
-                                      offset: const Offset(
-                                        0.0,
-                                        0.0,
-                                      ),
-                                      blurRadius: 5,
-                                      spreadRadius: .8,
-                                    ), //BoxShadow
-                                    //BoxShadow
-                                  ],
-                                ),
-                                child: Center(
-                                    child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
-                                      'Library Due Books : 0',
+                                    child: Center(
+                                        child: Text(
+                                      'Caste Descrimination',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 16.sp),
-                                    ),
-                                    Text(
-                                      'New Arrivals',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 16.sp),
-                                    ),
-                                    Text(
-                                      'Institutional Repository',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 16.sp),
-                                    ),
-                                  ],
-                                )),
-                              ),
-                              SizedBox(
-                                height: 2.5.h,
-                              ),
-                              Container(
-                                height: 10.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Colors.green.shade400,
-                                    Colors.green.shade400,
-                                  ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black54,
-                                      offset: const Offset(
-                                        0.0,
-                                        0.0,
-                                      ),
-                                      blurRadius: 5,
-                                      spreadRadius: .8,
-                                    ), //BoxShadow
-                                    //BoxShadow
-                                  ],
-                                ),
-                                child: Center(
-                                    child: Text(
-                                  'Grievance Redressal',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 16.sp),
-                                )),
-                              ),
-                              SizedBox(
-                                height: 2.5.h,
-                              ),
-                              Container(
-                                height: 10.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Colors.blueGrey.shade500,
-                                    Colors.blueGrey.shade500,
-                                  ]),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black54,
-                                      offset: const Offset(
-                                        0.0,
-                                        0.0,
-                                      ),
-                                      blurRadius: 5,
-                                      spreadRadius: .8,
-                                    ), //BoxShadow
-                                    //BoxShadow
-                                  ],
-                                ),
-                                child: Center(
-                                    child: Text(
-                                  'Caste Descrimination',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 16.sp),
-                                )),
-                              ),
+                                    )),
+                                  ),
+                                ],
+                              )
                             ],
-                          )
-                        ],
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: 2.5.h,
+                ),
+                Container(
+                  height: 123.5.h,
+                  //color: Colors.black,
+                  width: 100.w,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.white,
+                      Colors.white,
+                    ]),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black54,
+                        offset: const Offset(
+                          0.0,
+                          0.0,
+                        ),
+                        blurRadius: 6,
+                        spreadRadius: 1,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ),

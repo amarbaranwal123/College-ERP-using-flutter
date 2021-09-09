@@ -35,7 +35,7 @@ class DashBoard extends StatelessWidget {
                 bottom: MediaQuery.of(context).size.width / 30,
                 top: MediaQuery.of(context).size.width / 30),
             child: Container(
-              height: 123.h,
+              height: 123.5.h,
               //color: Colors.black,
               width: 100.w,
               decoration: BoxDecoration(
@@ -95,10 +95,15 @@ class DashBoard extends StatelessWidget {
                                   width: 38.w,
                                   child: Center(
                                     child: Container(
-                                      color: Colors.red,
-                                      height: 21.h,
-                                      width: 36.w,
-                                    ),
+                                        //color: Colors.red,
+                                        height: 21.h,
+                                        width: 36.w,
+                                        decoration: new BoxDecoration(
+                                            image: new DecorationImage(
+                                          image: new AssetImage(
+                                              "assets/image/Photo.jpg"),
+                                          fit: BoxFit.fill,
+                                        ))),
                                   ),
                                 ),
                               ),

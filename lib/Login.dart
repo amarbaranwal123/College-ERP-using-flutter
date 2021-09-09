@@ -8,6 +8,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   String dropdownValue = 'Faculty';
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +92,7 @@ class _LoginState extends State<Login> {
                                                             color: Colors.red,
                                                             fontWeight:
                                                                 FontWeight.bold,
-                                                            fontSize: 5.sp,
+                                                            fontSize: 2.sp,
                                                           ),
                                                         ),
                                                       ),
@@ -99,31 +100,38 @@ class _LoginState extends State<Login> {
                                                     Container(
                                                         height: 2.h,
                                                         width: 40.w,
-                                                        color: Colors.white,
+                                                        // color: Colors.black,
                                                         child: Center(
-                                                          child: Stack(
-                                                            children: [
-                                                              Container(
-                                                                height: .8.h,
-                                                                width: 30.h,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
+                                                          child: Align(
+                                                            alignment: Alignment
+                                                                .topLeft,
+                                                            child: Stack(
+                                                              children: [
+                                                                Center(
+                                                                  child:
+                                                                      Container(
+                                                                    height:
+                                                                        .8.h,
+                                                                    width: 15.h,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
                                                                               15),
-                                                                  gradient:
-                                                                      LinearGradient(
-                                                                    colors: [
-                                                                      Colors
-                                                                          .orange,
-                                                                      Colors
-                                                                          .orange,
-                                                                    ],
+                                                                      gradient:
+                                                                          LinearGradient(
+                                                                        colors: [
+                                                                          Colors
+                                                                              .orange,
+                                                                          Colors
+                                                                              .orange,
+                                                                        ],
+                                                                      ),
+                                                                    ),
                                                                   ),
                                                                 ),
-                                                              ),
-                                                            ],
+                                                              ],
+                                                            ),
                                                           ),
                                                         )),
                                                   ],
@@ -133,96 +141,91 @@ class _LoginState extends State<Login> {
                                           ),
                                         ),
                                         Container(
-                                          height: 5.h,
-                                          width: 90.w,
-                                          // color: Colors.lightBlue,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(6),
-                                            border: Border.all(
-                                              color: Colors.black,
-                                              width: 2,
-                                            ),
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Colors.white,
-                                                Colors.white,
-                                              ],
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.only(
-                                                left: MediaQuery.of(context)
-                                                        .size
-                                                        .width /
-                                                    30,
-                                                right: MediaQuery.of(context)
-                                                        .size
-                                                        .width /
-                                                    30),
-                                            child: DropdownButton<String>(
-                                              value: dropdownValue,
-                                              autofocus: true,
-                                              icon: const Icon(Icons
-                                                  .keyboard_arrow_down_sharp),
-                                              // iconSize: 24,
-                                              //elevation: 16,
-                                              isExpanded: true,
+                                            height: 5.h,
+                                            width: 90.w,
+                                            // color: Colors.lightBlue,
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(6),
+                                                border: Border.all(
+                                                    color: Colors.black,
+                                                    width: 2),
+                                                gradient:
+                                                    LinearGradient(colors: [
+                                                  Colors.white,
+                                                  Colors.white,
+                                                ])),
+                                            child: Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: MediaQuery.of(context)
+                                                            .size
+                                                            .width /
+                                                        30,
+                                                    right:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width /
+                                                            30),
+                                                child: DropdownButton<String>(
+                                                  value: dropdownValue,
+                                                  autofocus: true,
+                                                  icon: const Icon(Icons
+                                                      .keyboard_arrow_down_sharp),
+                                                  // iconSize: 24,
+                                                  //elevation: 16,
+                                                  isExpanded: true,
 
-                                              onChanged: (String? newValue) {
-                                                setState(() {
-                                                  dropdownValue = newValue!;
-                                                });
-                                              },
-                                              items: <String>[
-                                                'Faculty',
-                                                'Student',
-                                                'Parents',
-                                              ].map<DropdownMenuItem<String>>(
-                                                  (String value) {
-                                                return DropdownMenuItem<String>(
-                                                  value: value,
-                                                  child: Text(value),
-                                                );
-                                              }).toList(),
-                                            ),
-                                          ),
-                                        ),
+                                                  onChanged:
+                                                      (String? newValue) {
+                                                    setState(() {
+                                                      dropdownValue = newValue!;
+                                                    });
+                                                  },
+                                                  items: <String>[
+                                                    'Faculty',
+                                                    'Student',
+                                                    'Parents',
+                                                  ].map<
+                                                          DropdownMenuItem<
+                                                              String>>(
+                                                      (String value) {
+                                                    return DropdownMenuItem<
+                                                        String>(
+                                                      value: value,
+                                                      child: Text(value),
+                                                    );
+                                                  }).toList(),
+                                                ))),
                                         Container(
-                                          height: 5.h,
-                                          width: 90.w,
-                                          // color: Colors.lightBlue,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(6),
-                                            border: Border.all(
-                                              color: Colors.black,
-                                              width: 2,
-                                            ),
-                                            gradient: LinearGradient(
-                                              colors: [
+                                            height: 5.h,
+                                            width: 90.w,
+                                            // color: Colors.lightBlue,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(6),
+                                              border: Border.all(
+                                                  color: Colors.black,
+                                                  width: 2),
+                                              gradient: LinearGradient(colors: [
                                                 Colors.white,
                                                 Colors.white,
-                                              ],
+                                              ]),
                                             ),
-                                          ),
-                                          child: Padding(
-                                            padding: EdgeInsets.only(
-                                              left: MediaQuery.of(context)
-                                                      .size
-                                                      .width /
-                                                  30,
-                                              right: MediaQuery.of(context)
-                                                      .size
-                                                      .width /
-                                                  30,
-                                            ),
-                                            child: TextField(
-                                              decoration: InputDecoration(
-                                                  hintText: "Enter Name"),
-                                            ),
-                                          ),
-                                        ),
+                                            child: Padding(
+                                                padding: EdgeInsets.only(
+                                                    left: MediaQuery.of(context)
+                                                            .size
+                                                            .width /
+                                                        30,
+                                                    right:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width /
+                                                            30),
+                                                child: TextField(
+                                                    decoration: InputDecoration(
+                                                        hintText:
+                                                            "UserName")))),
                                         Container(
                                           height: 5.h,
                                           width: 90.w,
@@ -269,68 +272,77 @@ class _LoginState extends State<Login> {
                                                     .width /
                                                 50,
                                           ),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                height: 5.h,
-                                                width: 68.w,
-                                                // color: Colors.lightBlue,
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(6),
-                                                  border: Border.all(
-                                                    color: Colors.black,
-                                                    width: 2,
+                                          child: Container(
+                                            height: 5.h,
+                                            width: 90.w,
+                                            //  color: Colors.lightBlue,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Container(
+                                                  height: 5.h,
+                                                  width: 68.w,
+                                                  // color: Colors.lightBlue,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6),
+                                                    border: Border.all(
+                                                      color: Colors.black,
+                                                      width: 2,
+                                                    ),
+                                                    gradient: LinearGradient(
+                                                      colors: [
+                                                        Colors.white,
+                                                        Colors.white,
+                                                      ],
+                                                    ),
                                                   ),
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Colors.white,
-                                                      Colors.white,
-                                                    ],
-                                                  ),
-                                                ),
-                                                child: Padding(
-                                                  padding: EdgeInsets.only(
-                                                    left: MediaQuery.of(context)
-                                                            .size
-                                                            .width /
-                                                        30,
-                                                    right:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width /
-                                                            30,
-                                                  ),
-                                                  child: TextField(
-                                                    decoration: InputDecoration(
-                                                        hintText:
-                                                            "Enter Captcha Code"),
-                                                  ),
-                                                ),
-                                              ),
-                                              Container(
-                                                height: 5.h,
-                                                width: 20.w,
-                                                // color: Colors.lightBlue,
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.black,
-                                                    width: 2,
-                                                  ),
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Colors.white,
-                                                      Colors.white,
-                                                    ],
+                                                  child: Padding(
+                                                    padding: EdgeInsets.only(
+                                                      left:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width /
+                                                              30,
+                                                      right:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width /
+                                                              30,
+                                                    ),
+                                                    child: TextField(
+                                                      decoration: InputDecoration(
+                                                          hintText:
+                                                              "Enter Captcha Code"),
+                                                    ),
                                                   ),
                                                 ),
-                                                child: Align(
-                                                    alignment: Alignment.center,
-                                                    child: Text('Captcha')),
-                                              ),
-                                            ],
+                                                Container(
+                                                  height: 5.h,
+                                                  width: 20.w,
+                                                  // color: Colors.lightBlue,
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                      color: Colors.black,
+                                                      width: 2,
+                                                    ),
+                                                    gradient: LinearGradient(
+                                                      colors: [
+                                                        Colors.white,
+                                                        Colors.white,
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  child: Align(
+                                                      alignment:
+                                                          Alignment.center,
+                                                      child: Text('Captcha')),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         Padding(
@@ -352,21 +364,72 @@ class _LoginState extends State<Login> {
                                                 height: 5.h,
                                                 width: 40.w,
                                                 // color: Colors.lightBlue,
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(6),
-                                                  border: Border.all(
-                                                    color: Colors.black,
-                                                    width: 2,
-                                                  ),
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Colors.white,
-                                                      Colors.white,
-                                                    ],
-                                                  ),
+
+                                                child: Stack(
+                                                  children: [
+                                                    Center(
+                                                      child: Container(
+                                                        height: 5.h,
+                                                        width: 40.w,
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Container(
+                                                              height: 4.h,
+                                                              width: 8.w,
+                                                              // color: Colors
+                                                              //     .lightBlue,
+                                                              child: Align(
+                                                                alignment: Alignment
+                                                                    .centerLeft,
+                                                                child: Checkbox(
+                                                                    checkColor:
+                                                                        Colors
+                                                                            .white,
+                                                                    // fillColor: MaterialStateProperty.resolveWith(getColor),
+                                                                    value:
+                                                                        isChecked,
+                                                                    onChanged:
+                                                                        (bool?
+                                                                            value) {
+                                                                      setState(
+                                                                          () {
+                                                                        isChecked =
+                                                                            value!;
+                                                                      });
+                                                                    }),
+                                                              ),
+                                                            ),
+                                                            Expanded(
+                                                              child: Container(
+                                                                height: 4.h,
+                                                                width: 25.w,
+                                                                // color:
+                                                                //     Colors.blue,
+                                                                child:
+                                                                    FittedBox(
+                                                                  fit: BoxFit
+                                                                      .contain,
+                                                                  child: Text(
+                                                                    'Remember me',
+                                                                    style: TextStyle(
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .bold,
+                                                                        fontSize:
+                                                                            2.sp),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
                                                 ),
-                                                child: Center(),
                                               ),
                                               TextButton(
                                                 style: ButtonStyle(

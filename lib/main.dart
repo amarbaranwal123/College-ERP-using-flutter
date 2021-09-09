@@ -1,8 +1,13 @@
+import 'package:erp/Login.dart';
+import 'package:erp/MyProfile.dart';
+import 'package:erp/NavBar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 
-import 'Login.dart';
+import 'ApplicationForm.dart';
+import 'DashBoard.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,13 +20,18 @@ class MyApp extends StatelessWidget {
 
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
+        routes: {
+          MyProfile.routeName: (ctx) => MyProfile(),
+          DashBoard.routeName: (ctx) => DashBoard(),
+          ApplicationForm.routeName: (ctx) => ApplicationForm(),
+        },
         debugShowCheckedModeBanner: false,
-        home: Login(),
+        home: DashBoard(),
       );
     });
     /* return MaterialApp(
          // More() //Alcl() //, //HomeScreen(),
-        //routes: {
+        routes: {
         /*SignupScreen.routeName: (ctx) => SignupScreen(),
           LoginScreen.routeName: (ctx) => LoginScreen(),
           HomeScreen.routeName: (ctx) => HomeScreen(),*/

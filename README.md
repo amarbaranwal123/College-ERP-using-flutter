@@ -1,16 +1,3 @@
-# erp
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# DYPIMR_ERP
+![WhatsApp Image 2021-09-10 at 2 48 43 PM (1)](https://user-images.githubusercontent.com/79193713/132831886-f206da35-296a-4a95-91ea-46f04abeea8d.jpeg)
+![WhatsApp Image 2021-09-10 at 2 48 43 PM](https://user-images.githubusercontent.com/79193713/132831891-2a50bd00-503c-4de9-a339-9cbb3279faef.jpeg)

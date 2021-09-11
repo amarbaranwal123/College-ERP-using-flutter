@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'NavBar.dart';
 
-class MyProfile extends StatelessWidget {
+class Eresource extends StatelessWidget {
   static const routeName = 'lib/Eresource';
   @override
   Widget build(BuildContext context) {

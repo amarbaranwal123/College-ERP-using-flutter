@@ -9,7 +9,6 @@ import 'MyProfile.dart';
 class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    bool isSelected = false;
     return SafeArea(
       child: Container(
         width: 60.w,
@@ -39,75 +38,61 @@ class NavBar extends StatelessWidget {
                   ),
                 ),
               ),
-              Ink(
-                // ignore: dead_code
-                color: isSelected ? Colors.yellow : Colors.transparent,
-                child: ListTile(
-                  leading: Icon(Icons.dashboard_customize_outlined),
-                  title: Text('Dashboard'),
-                  onTap: () {
-                    Navigator.of(context).pushNamed(DashBoard.routeName);
-                  },
-                ),
-              ),
-              ListTile(
-                // ignore: dead_code
-                tileColor: isSelected ? Colors.pink : Colors.transparent,
-                leading: Icon(Icons.person_outlined),
-                title: Text('My Profilew'),
+              _createDrawerItem(
+                icon: Icons.dashboard,
+                text: 'Dashboard',
                 onTap: () {
-                  Navigator.of(context).pushNamed(MyProfile.routeName);
+                  Navigator.of(context).push(_createRoute1());
                 },
               ),
-              ListTile(
-                leading: Icon(Icons.admin_panel_settings_outlined),
-                title: Text('Admission Form'),
+              _createDrawerItem(
+                icon: Icons.person_outlined,
+                text: 'My Profile',
                 onTap: () {
-                  Navigator.of(context).pushNamed(ApplicationForm.routeName);
+                  Navigator.of(context).push(_createRoute2());
                 },
               ),
-              /* ListTile(
-                leading: Icon(Icons.library_books_outlined),
-                title: Text('E-Resources'),
+              _createDrawerItem(
+                icon: Icons.admin_panel_settings_outlined,
+                text: 'Admission Form',
                 onTap: () {
-                   Navigator.of(context).pushNamed(Eresource.routeName);
+                  Navigator.of(context).push(_createRoute2());
                 },
-              ), */
-
-              ListTile(
-                leading: Icon(Icons.charging_station_outlined),
-                title: Text('TimeTable'),
-                onTap: () => {Navigator.pop(context)},
               ),
-              ListTile(
-                leading: Icon(Icons.holiday_village_outlined),
-                title: Text('Holiday List'),
-                onTap: () => {Navigator.pop(context)},
+              _createDrawerItem(
+                icon: Icons.charging_station_outlined,
+                text: 'TimeTable',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute2());
+                },
               ),
-              ListTile(
-                leading: Icon(Icons.work_off_outlined),
-                title: Text('Assignment'),
-                onTap: () => null,
+              _createDrawerItem(
+                icon: Icons.holiday_village_outlined,
+                text: 'Holiday List',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute1());
+                },
               ),
-              ListTile(
-                leading: Icon(Icons.flutter_dash_outlined),
-                title: Text('Fees Payment'),
-                onTap: () => {Navigator.pop(context)},
+              _createDrawerItem(
+                icon: Icons.work_off_outlined,
+                text: 'Assignment',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute1());
+                },
               ),
-              ListTile(
-                leading: Icon(Icons.flight_land_outlined),
-                title: Text('Fine Payment'),
-                onTap: () => {Navigator.pop(context)},
+              _createDrawerItem(
+                icon: Icons.flutter_dash_outlined,
+                text: 'Fees Payment',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute1());
+                },
               ),
-              ListTile(
-                leading: Icon(Icons.library_add_check_outlined),
-                title: Text('Library'),
-                onTap: () => {Navigator.pop(context)},
-              ),
-              ListTile(
-                leading: Icon(Icons.report_gmailerrorred_outlined),
-                title: Text('Reports'),
-                onTap: () => {Navigator.pop(context)},
+              _createDrawerItem(
+                icon: Icons.flight_land_outlined,
+                text: 'Fine Payment',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute1());
+                },
               ),
             ],
           ),
@@ -115,4 +100,56 @@ class NavBar extends StatelessWidget {
       ),
     );
   }
+}
+
+Route _createRoute1() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => DashBoard(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute2() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => MyProfile(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Widget _createDrawerItem(
+    {required IconData icon, required String text, GestureTapCallback? onTap}) {
+  return ListTile(
+    title: Row(
+      children: <Widget>[
+        Icon(icon),
+        Padding(
+          padding: EdgeInsets.only(left: 8.0),
+          child: Text(text),
+        )
+      ],
+    ),
+    onTap: onTap,
+  );
 }

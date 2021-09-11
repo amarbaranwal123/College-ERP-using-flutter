@@ -907,7 +907,7 @@ class MyProfile extends StatelessWidget {
                                         title: Row(
                                           children: [
                                             Icon(
-                                              Icons.home_filled,
+                                              Icons.local_post_office_rounded,
                                               color: Colors.white,
                                               size: 20,
                                             ),
@@ -922,14 +922,14 @@ class MyProfile extends StatelessWidget {
                                         ),
                                         children: [
                                           Container(
-                                            height: 80.h,
+                                            height: 60.h,
                                             width: 100.w,
                                             color: Colors.white,
                                             child: Stack(
                                               children: [
                                                 Center(
                                                   child: Container(
-                                                    height: 77.h,
+                                                    height: 57.h,
                                                     width: 80.w,
                                                     decoration:
                                                         new BoxDecoration(
@@ -961,10 +961,10 @@ class MyProfile extends StatelessWidget {
                                                       child: Stack(
                                                         children: [
                                                           Container(
-                                                              height: 72.h,
+                                                              height: 50.h,
                                                               width: 70.w,
-                                                              color: Colors
-                                                                  .black38,
+                                                              // color: Colors
+                                                              //     .black38,
                                                               child: Stack(
                                                                 children: [
                                                                   Center(
@@ -983,8 +983,6 @@ class MyProfile extends StatelessWidget {
                                                                           //     Colors.blueAccent,
                                                                           child:
                                                                               Column(
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
                                                                             children: [
                                                                               Align(
                                                                                 alignment: Alignment.centerLeft,
@@ -1128,47 +1126,7 @@ class MyProfile extends StatelessWidget {
                                                                                 child: Align(
                                                                                   alignment: Alignment.centerLeft,
                                                                                   child: Text(
-                                                                                    'N/A',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                        ),
-                                                                        Container(
-                                                                          height:
-                                                                              6.5.h,
-                                                                          width:
-                                                                              50.w,
-                                                                          // color:
-                                                                          //     Colors.blueAccent,
-                                                                          child:
-                                                                              Column(
-                                                                            children: [
-                                                                              Align(
-                                                                                alignment: Alignment.centerLeft,
-                                                                                child: Container(
-                                                                                  height: 2.5.h,
-                                                                                  width: 40.w,
-                                                                                  //color: Colors.red,
-                                                                                  child: Align(
-                                                                                    alignment: Alignment.centerLeft,
-                                                                                    child: Text(
-                                                                                      'T.Y. MCA , TRACK - I :',
-                                                                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.sp),
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Container(
-                                                                                decoration: BoxDecoration(border: Border.all(color: Colors.black26, width: 1.25), gradient: LinearGradient(colors: [Colors.white, Colors.white])),
-                                                                                height: 4.h,
-                                                                                width: 50.w,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    'N/A',
+                                                                                    'T.Y. MCA Track-l',
                                                                                     style: TextStyle(fontSize: 12.sp),
                                                                                   ),
                                                                                 ),
@@ -1235,7 +1193,7 @@ class MyProfile extends StatelessWidget {
                                                                                   child: Align(
                                                                                     alignment: Alignment.centerLeft,
                                                                                     child: Text(
-                                                                                      'PRN :',
+                                                                                      'Roll No :',
                                                                                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.sp),
                                                                                     ),
                                                                                   ),
@@ -1248,7 +1206,7 @@ class MyProfile extends StatelessWidget {
                                                                                 child: Align(
                                                                                   alignment: Alignment.centerLeft,
                                                                                   child: Text(
-                                                                                    'N/A',
+                                                                                    '405',
                                                                                     style: TextStyle(fontSize: 12.sp),
                                                                                   ),
                                                                                 ),
@@ -1275,7 +1233,7 @@ class MyProfile extends StatelessWidget {
                                                                                   child: Align(
                                                                                     alignment: Alignment.centerLeft,
                                                                                     child: Text(
-                                                                                      'Roll. No. :',
+                                                                                      'Status Type :',
                                                                                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.sp),
                                                                                     ),
                                                                                   ),
@@ -1288,83 +1246,9 @@ class MyProfile extends StatelessWidget {
                                                                                 child: Align(
                                                                                   alignment: Alignment.centerLeft,
                                                                                   child: Text(
-                                                                                    '405',
+                                                                                    'Management',
                                                                                     style: TextStyle(fontSize: 12.sp),
                                                                                   ),
-                                                                                ),
-                                                                              ),
-                                                                              Container(
-                                                                                height: 6.5.h,
-                                                                                width: 50.w,
-                                                                                // color:
-                                                                                //     Colors.blueAccent,
-                                                                                child: Column(
-                                                                                  children: [
-                                                                                    Align(
-                                                                                      alignment: Alignment.centerLeft,
-                                                                                      child: Container(
-                                                                                        height: 2.5.h,
-                                                                                        width: 40.w,
-                                                                                        //color: Colors.red,
-                                                                                        child: Align(
-                                                                                          alignment: Alignment.centerLeft,
-                                                                                          child: Text(
-                                                                                            'Admission Date :',
-                                                                                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.sp),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Container(
-                                                                                      decoration: BoxDecoration(border: Border.all(color: Colors.black26, width: 1.25), gradient: LinearGradient(colors: [Colors.white, Colors.white])),
-                                                                                      height: 4.h,
-                                                                                      width: 50.w,
-                                                                                      child: Align(
-                                                                                        alignment: Alignment.centerLeft,
-                                                                                        child: Text(
-                                                                                          '27/09/2019',
-                                                                                          style: TextStyle(fontSize: 12.sp),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ],
-                                                                                ),
-                                                                              ),
-                                                                              Container(
-                                                                                height: 6.5.h,
-                                                                                width: 50.w,
-                                                                                // color:
-                                                                                //     Colors.blueAccent,
-                                                                                child: Column(
-                                                                                  children: [
-                                                                                    Align(
-                                                                                      alignment: Alignment.centerLeft,
-                                                                                      child: Container(
-                                                                                        height: 2.5.h,
-                                                                                        width: 40.w,
-                                                                                        //color: Colors.red,
-                                                                                        child: Align(
-                                                                                          alignment: Alignment.centerLeft,
-                                                                                          child: Text(
-                                                                                            'Status Type :',
-                                                                                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.sp),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Container(
-                                                                                      decoration: BoxDecoration(border: Border.all(color: Colors.black26, width: 1.25), gradient: LinearGradient(colors: [Colors.white, Colors.white])),
-                                                                                      height: 4.h,
-                                                                                      width: 50.w,
-                                                                                      child: Align(
-                                                                                        alignment: Alignment.centerLeft,
-                                                                                        child: Text(
-                                                                                          'Management',
-                                                                                          style: TextStyle(fontSize: 12.sp),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ],
                                                                                 ),
                                                                               ),
                                                                             ],
@@ -1470,333 +1354,7 @@ class MyProfile extends StatelessWidget {
                                                               width: 70.w,
                                                               //         color: Colors.black38,
                                                               child: Stack(
-                                                                children: [
-                                                                  Column(
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .spaceBetween,
-                                                                    children: [
-                                                                      Center(
-                                                                        child:
-                                                                            Container(
-                                                                          color:
-                                                                              Colors.white,
-                                                                          height:
-                                                                              15.h,
-                                                                          width:
-                                                                              30.w,
-                                                                          child:
-                                                                              Center(
-                                                                            child: Container(
-                                                                                //color: Colors.red,
-                                                                                height: 14.h,
-                                                                                width: 28.w,
-                                                                                decoration: new BoxDecoration(
-                                                                                    image: new DecorationImage(
-                                                                                  image: new AssetImage("assets/image/Photo.jpg"),
-                                                                                  fit: BoxFit.fill,
-                                                                                ))),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Center(
-                                                                          child:
-                                                                              Text(
-                                                                            'AMARNATH BARANWAL',
-                                                                            style:
-                                                                                TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.message_outlined,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    'amar.aiti49@gmail.com',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.call,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    '9140776548',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.cake,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    '20/12/1999',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.medical_services,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    'B+',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.home,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    'Uttar Pradesh',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.people,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    'Baniya',
-                                                                                    style: TextStyle(fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        height:
-                                                                            4.h,
-                                                                        width:
-                                                                            60.w,
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.start,
-                                                                          children: [
-                                                                            Container(
-                                                                              width: 15.w,
-                                                                              height: 4.h,
-                                                                              // color:
-                                                                              //     Colors.red,
-                                                                              child: Center(
-                                                                                child: Icon(
-                                                                                  Icons.cast_for_education,
-                                                                                  size: 15.sp,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            Expanded(
-                                                                              child: Container(
-                                                                                width: 15.w,
-                                                                                height: 4.h,
-                                                                                // color:
-                                                                                //     Colors.red.shade200,
-                                                                                child: Align(
-                                                                                  alignment: Alignment.centerLeft,
-                                                                                  child: Text(
-                                                                                    'MCA',
-                                                                                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.sp),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  )
-                                                                ],
+                                                                children: [],
                                                               ))
                                                         ],
                                                       ),

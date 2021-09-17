@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
 import 'dart:ui';
-
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'NavBar.dart';
@@ -147,18 +147,39 @@ class _EresourseState extends State<Eresourse> {
                                           ),
                                           child: Column(
                                             children: [
+                                              GestureDetector(
+                                                onTap: _launchURL,
+                                                child: Container(
+                                                  height: 28.h,
+                                                  width: 100.w,
+                                                  decoration: new BoxDecoration(
+                                                    image: new DecorationImage(
+                                                      image: new AssetImage(
+                                                          "assets/image/ER1.png"),
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                    border: Border.all(
+                                                        color:
+                                                            Colors.red.shade900,
+                                                        width: 5),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: .6.h,
+                                              ),
                                               Container(
                                                 height: 28.h,
                                                 width: 100.w,
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/image/Photo.jpg"),
+                                                        "assets/image/ER2.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -171,12 +192,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/image/Photo.jpg"),
+                                                        "assets/image/ER3.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -189,12 +210,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/image/Photo.jpg"),
+                                                        "assets/image/ER4.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -207,12 +228,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/image/Photo.jpg"),
+                                                        "assets/image/ER5.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -225,12 +246,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/ER/ER5.png"),
-                                                    // fit: BoxFit.fill,
+                                                        "assets/image/ER6.png"),
+                                                    fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -243,12 +264,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/ER/ER6.png"),
+                                                        "assets/image/ER7.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -261,12 +282,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/ER/ER7.png"),
+                                                        "assets/image/ER8.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -279,30 +300,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/ER/ER8.png"),
-                                                    fit: BoxFit.fill,
+                                                        "assets/image/ER9.png"),
+                                                    fit: BoxFit.cover,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
-                                                      width: 5),
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                height: .6.h,
-                                              ),
-                                              Container(
-                                                height: 28.h,
-                                                width: 100.w,
-                                                decoration: new BoxDecoration(
-                                                  image: new DecorationImage(
-                                                    image: new AssetImage(
-                                                        "assets/ER/ER9.png"),
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                  border: Border.all(
-                                                      color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -315,12 +318,12 @@ class _EresourseState extends State<Eresourse> {
                                                 decoration: new BoxDecoration(
                                                   image: new DecorationImage(
                                                     image: new AssetImage(
-                                                        "assets/ER/ER10.png"),
+                                                        "assets/image/ER10.png"),
                                                     fit: BoxFit.fill,
                                                   ),
                                                   border: Border.all(
                                                       color:
-                                                          Colors.red.shade600,
+                                                          Colors.red.shade900,
                                                       width: 5),
                                                 ),
                                               ),
@@ -341,5 +344,14 @@ class _EresourseState extends State<Eresourse> {
                 ),
               ))),
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://flutter.io';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

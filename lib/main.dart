@@ -18,12 +18,15 @@ class MyApp extends StatelessWidget {
     ]);
 
     return Sizer(builder: (context, orientation, deviceType) {
-      return MaterialApp(routes: {
-        MyProfile.routeName: (ctx) => MyProfile(),
-        DashBoard.routeName: (ctx) => DashBoard(),
-        Eresourse.routeName: (ctx) => Eresourse(),
-        ApplicationForm.routeName: (ctx) => ApplicationForm(),
-      }, debugShowCheckedModeBanner: false, home: Login() // MyProfile(),
+      return MaterialApp(
+          routes: {
+            MyProfile.routeName: (ctx) => MyProfile(),
+            DashBoard.routeName: (ctx) => DashBoard(),
+            Eresourse.routeName: (ctx) => Eresourse(),
+            ApplicationForm.routeName: (ctx) => ApplicationForm(),
+          },
+          debugShowCheckedModeBanner: false,
+          home: Eresourse() //Login() // MyProfile(),
           );
     });
     /* return MaterialApp(

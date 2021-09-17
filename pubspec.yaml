@@ -31,6 +31,8 @@ dependencies:
   hb_check_code: ^0.0.2
   random_string: ^2.3.1
   new_gradient_app_bar: ^0.2.0
+  url_launcher: ^6.0.10
+  url_launcher_web: ^2.0.4
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +61,16 @@ flutter:
     - assets/image/dpu.png
     - assets/image/Rupali.jpg
     - assets/image/Untitled.png
+    - assets/image/ER1.png
+    - assets/image/ER2.png
+    - assets/image/ER3.png
+    - assets/image/ER4.png
+    - assets/image/ER5.png
+    - assets/image/ER6.png
+    - assets/image/ER7.png
+    - assets/image/ER8.png
+    - assets/image/ER9.png
+    - assets/image/ER10.png
 
 
   #   - images/a_dot_burr.jpeg

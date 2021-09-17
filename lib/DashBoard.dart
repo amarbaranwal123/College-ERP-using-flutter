@@ -105,10 +105,6 @@ class _DashBoardState extends State<DashBoard> {
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    ElevatedButton(
-                                      onPressed: _openDrawer,
-                                      child: const Text('Open Drawer'),
-                                    ),
                                     Align(
                                       alignment: Alignment.centerLeft,
                                       child: Container(

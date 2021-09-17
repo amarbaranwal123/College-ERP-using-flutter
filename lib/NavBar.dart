@@ -1,5 +1,6 @@
 import 'package:erp/ApplicationForm.dart';
 import 'package:erp/DashBoard.dart';
+import 'package:erp/timetable.dart';
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -71,7 +72,7 @@ class NavBar extends StatelessWidget {
                 icon: Icons.charging_station_outlined,
                 text: 'TimeTable',
                 onTap: () {
-                  Navigator.of(context).push(_createRoute2());
+                  Navigator.of(context).push(_createRoute5());
                 },
               ),
               _createDrawerItem(
@@ -149,6 +150,24 @@ Route _createRoute2() {
 Route _createRoute3() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Eresourse(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute5() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => TimeTable(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(-5.0, .0);
       const end = Offset.zero;

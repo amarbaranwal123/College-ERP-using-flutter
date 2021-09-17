@@ -7,6 +7,7 @@ import 'ApplicationForm.dart';
 import 'DashBoard.dart';
 import 'Eresource.dart';
 import 'MyProfile.dart';
+import 'timetable.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,13 +21,14 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
           routes: {
+            TimeTable.routeName: (ctx) => TimeTable(),
             MyProfile.routeName: (ctx) => MyProfile(),
             DashBoard.routeName: (ctx) => DashBoard(),
             Eresourse.routeName: (ctx) => Eresourse(),
             ApplicationForm.routeName: (ctx) => ApplicationForm(),
           },
           debugShowCheckedModeBanner: false,
-          home: Eresourse() //Login() // MyProfile(),
+          home: TimeTable() // Eresourse() //Login() // MyProfile(),
           );
     });
     /* return MaterialApp(

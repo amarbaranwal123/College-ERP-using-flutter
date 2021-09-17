@@ -4,6 +4,7 @@ import 'package:erp/DashBoard.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import 'Eresource.dart';
 import 'MyProfile.dart';
 
 class NavBar extends StatelessWidget {
@@ -22,10 +23,10 @@ class NavBar extends StatelessWidget {
                 currentAccountPicture: CircleAvatar(
                   child: ClipOval(
                     child: Image.asset(
-                      'assets/amar.jpg',
+                      'assets/image/dpu.png',
                       width: 90,
                       height: 90,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
@@ -50,6 +51,13 @@ class NavBar extends StatelessWidget {
                 text: 'My Profile',
                 onTap: () {
                   Navigator.of(context).push(_createRoute2());
+                },
+              ),
+              _createDrawerItem(
+                icon: Icons.read_more,
+                text: 'E-Resources',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute3());
                 },
               ),
               _createDrawerItem(
@@ -123,6 +131,24 @@ Route _createRoute1() {
 Route _createRoute2() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => MyProfile(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute3() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Eresourse(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(-5.0, .0);
       const end = Offset.zero;

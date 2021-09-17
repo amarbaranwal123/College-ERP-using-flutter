@@ -1,5 +1,9 @@
+import 'package:erp/DashBoard.dart';
+
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
+import 'DashBoard.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -440,7 +444,10 @@ class _LoginState extends State<Login> {
                                                       MaterialStateProperty.all<
                                                           Color>(Colors.white),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.of(context)
+                                                      .push(_createRoute1());
+                                                },
                                                 child: Text('Sign In'),
                                               )
                                             ],
@@ -480,7 +487,7 @@ class _LoginState extends State<Login> {
                                                     child: FittedBox(
                                                       fit: BoxFit.contain,
                                                       child: Text(
-                                                        'Forget Password ?',
+                                                        'Forgett Password ?',
                                                         style: TextStyle(
                                                             color: Colors.blue,
                                                             fontSize: 10.sp,
@@ -493,31 +500,6 @@ class _LoginState extends State<Login> {
                                                 ),
                                               ],
                                             )),
-                                        /* Container(
-                                          height: 5.h,
-                                          width: 90.w,
-                                          color: Colors.black,
-                                        ),
-                                        Container(
-                                          height: 5.h,
-                                          width: 90.w,
-                                          color: Colors.black,
-                                        ),
-                                        Container(
-                                          height: 5.h,
-                                          -width: 90.w,
-                                          color: Colors.black,
-                                        ),
-                                        Container(
-                                          height: 5.h,
-                                          width: 90.w,
-                                          color: Colors.black,
-                                        ),
-                                        Container(
-                                          height: 5.h,
-                                          width: 90.w,
-                                          color: Colors.black,
-                                        )*/
                                       ],
                                     )
                                   ],
@@ -537,4 +519,22 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+}
+
+Route _createRoute1() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => DashBoard(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
 }

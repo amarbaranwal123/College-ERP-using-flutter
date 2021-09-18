@@ -140,7 +140,7 @@ class _HolidayState extends State<Holiday> {
                                                 "!!!...You should visit other pages...!!!",
                                               ),
                                               Text(
-                                                "!!!...BTW, CORONA ...!!!",
+                                                "!!!...BTW, CORONA की छुट्टियों से मन नही भरा क्या अभी...!!!",
                                               ),
                                             ],
                                           ),

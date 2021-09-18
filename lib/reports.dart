@@ -82,29 +82,26 @@ class _ReportsState extends State<Reports> {
                                       child: ExpansionTile(
                                         trailing: SizedBox.shrink(),
                                         childrenPadding: EdgeInsets.only(
-                                          left: MediaQuery.of(context)
-                                                  .size
-                                                  .width /
-                                              99,
-                                          right: MediaQuery.of(context)
-                                                  .size
-                                                  .width /
-                                              99,
-                                          bottom: MediaQuery.of(context)
-                                                  .size
-                                                  .width /
-                                              99,
+                                          left: .25,
+                                          right: 0.25,
+                                          bottom: 0.5,
                                         ),
                                         title: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          // mainAxisAlignment:
+                                          //     MainAxisAlignment.spaceBetween,
                                           children: [
+                                            SizedBox(
+                                              width: 1.w,
+                                            ),
                                             Text(
                                               '  Receipt Register',
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 17),
+                                            ),
+                                            SizedBox(
+                                              width: 34.w,
                                             ),
                                             Icon(
                                               Icons.arrow_drop_down_outlined,

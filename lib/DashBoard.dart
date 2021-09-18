@@ -69,7 +69,7 @@ class _DashBoardState extends State<DashBoard> {
                           0.0,
                           0.0,
                         ),
-                        blurRadius: 6,
+                        blurRadius: 2,
                         spreadRadius: 1,
                       ), //BoxShadow
                       //BoxShadow
@@ -97,7 +97,8 @@ class _DashBoardState extends State<DashBoard> {
                                     child: Container(
                                       //        color: Colors.yellow,
                                       decoration: BoxDecoration(
-                                        border: Border.all(),
+                                        border:
+                                            Border.all(color: Colors.black26),
                                         boxShadow: [
                                           BoxShadow(
                                             color: Colors.black12,

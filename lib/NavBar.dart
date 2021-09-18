@@ -1,5 +1,6 @@
 import 'package:erp/ApplicationForm.dart';
 import 'package:erp/DashBoard.dart';
+import 'package:erp/Login.dart';
 import 'package:erp/timetable.dart';
 
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class NavBar extends StatelessWidget {
                 ),
               ),
               _createDrawerItem(
-                icon: Icons.dashboard,
+                icon: Icons.clear_all_rounded,
                 text: 'Dashboard',
                 onTap: () {
                   Navigator.of(context).push(_createRoute1());
@@ -101,6 +102,13 @@ class NavBar extends StatelessWidget {
                 text: 'Fine Payment',
                 onTap: () {
                   Navigator.of(context).push(_createRoute1());
+                },
+              ),
+              _createDrawerItem(
+                icon: Icons.keyboard_backspace_rounded,
+                text: 'Sign Out',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute15());
                 },
               ),
             ],
@@ -168,6 +176,24 @@ Route _createRoute3() {
 Route _createRoute5() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => TimeTable(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute15() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Login(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(-5.0, .0);
       const end = Offset.zero;

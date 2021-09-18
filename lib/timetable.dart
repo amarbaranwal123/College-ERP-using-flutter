@@ -18,6 +18,51 @@ class _TimeTableState extends State<TimeTable> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((_) async {
+      await showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          content: Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 10.h,
+                    width: 40.w,
+                    // color: Colors.black45,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                          "Time-Table is not uploaded yet, Contact to your HOD"),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 10.h,
+                  width: 10.w,
+                  // color: Colors.black87,
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      icon: Icon(Icons.outbond_outlined),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          //contentPadding: EdgeInsets.all(0.0),
+        ),
+      );
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: NewGradientAppBar(

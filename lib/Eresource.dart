@@ -45,7 +45,7 @@ class _EresourseState extends State<Eresourse> {
           child: SingleChildScrollView(
               physics: BouncingScrollPhysics(),
               child: Container(
-                color: Colors.blueGrey.shade50,
+                color: Colors.grey.shade300,
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.only(

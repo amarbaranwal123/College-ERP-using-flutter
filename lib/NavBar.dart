@@ -1,7 +1,9 @@
 import 'package:erp/ApplicationForm.dart';
 import 'package:erp/DashBoard.dart';
 import 'package:erp/Login.dart';
+import 'package:erp/admission.dart';
 import 'package:erp/finepayment.dart';
+import 'package:erp/holiday.dart';
 import 'package:erp/reports.dart';
 import 'package:erp/timetable.dart';
 
@@ -23,24 +25,24 @@ class NavBar extends StatelessWidget {
                 parent: AlwaysScrollableScrollPhysics()),
             children: [
               UserAccountsDrawerHeader(
-                accountName: Text('Amar Baranwalll'),
+                accountName: Text('Amar Baranwal'),
                 accountEmail: Text('amar.aiti49@gmail.com'),
-                currentAccountPicture: CircleAvatar(
-                  child: ClipOval(
-                    child: Image.asset(
-                      'assets/image/dpu.png',
-                      width: 90,
-                      height: 90,
-                      fit: BoxFit.contain,
+                currentAccountPicture: Container(
+                  width: 20.w,
+                  height: 20.h,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage("assets/image/Photo.jpg"),
                     ),
                   ),
                 ),
                 decoration: BoxDecoration(
                   color: Colors.blue,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        'https:oflutter.com/wp-content/uploads/2021/02/profile-bg3.jpg'),
-                    fit: BoxFit.cover,
+                  image: new DecorationImage(
+                    image: new AssetImage("assets/image/back.jpg"),
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -69,7 +71,7 @@ class NavBar extends StatelessWidget {
                 icon: Icons.admin_panel_settings_outlined,
                 text: 'Admission Form',
                 onTap: () {
-                  Navigator.of(context).push(_createRoute2());
+                  Navigator.of(context).push(_createRoute4());
                 },
               ),
               _createDrawerItem(
@@ -83,7 +85,7 @@ class NavBar extends StatelessWidget {
                 icon: Icons.holiday_village_outlined,
                 text: 'Holiday List',
                 onTap: () {
-                  Navigator.of(context).push(_createRoute1());
+                  Navigator.of(context).push(_createRoute6());
                 },
               ),
               _createDrawerItem(
@@ -183,9 +185,45 @@ Route _createRoute3() {
   );
 }
 
+Route _createRoute4() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Admission(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
 Route _createRoute5() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => TimeTable(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute6() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Holiday(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(-5.0, .0);
       const end = Offset.zero;

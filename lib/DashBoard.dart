@@ -24,7 +24,7 @@ class _DashBoardState extends State<DashBoard> {
           title: Container(
             height: 9.h,
             width: 35.w,
-            //color: Colors.black,
+            // color: Colors.black,
             child: Align(
               alignment: Alignment.centerLeft,
               child: Image.asset(
@@ -33,10 +33,12 @@ class _DashBoardState extends State<DashBoard> {
               ),
             ),
           ),
-          gradient: LinearGradient(colors: [
-            Colors.blue.shade300,
-            Colors.blue.shade800,
-          ])),
+          gradient: LinearGradient(
+            colors: [
+              Colors.blue.shade300,
+              Colors.blue.shade800,
+            ],
+          )),
       key: _scaffoldKey,
       // extendBodyBehindAppBar: true,
       drawer: NavBar(),

@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:erp/DashBoard.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'NavBar.dart';
@@ -14,6 +16,7 @@ class Reports extends StatefulWidget {
 
 class _ReportsState extends State<Reports> {
   String dropdownValue = '-Select-';
+  String dropdownValue1 = '10';
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +121,7 @@ class _ReportsState extends State<Reports> {
                                                 child: Column(
                                                   children: [
                                                     Container(
-                                                      // color: Colors.black12,
+                                                      //color: Colors.black12,
                                                       height: 2.5.h,
                                                       child: Align(
                                                         alignment:
@@ -194,57 +197,220 @@ class _ReportsState extends State<Reports> {
                                                                         .width /
                                                                     15),
                                                             child:
-                                                                DropdownButton<
-                                                                    String>(
-                                                              value:
-                                                                  dropdownValue,
-                                                              autofocus: true,
-                                                              icon: const Icon(Icons
-                                                                  .keyboard_arrow_down_sharp),
-                                                              // iconSize: 24,
-                                                              //elevation: 16,
-                                                              isExpanded: true,
+                                                                DropdownButtonHideUnderline(
+                                                              child:
+                                                                  DropdownButton<
+                                                                      String>(
+                                                                value:
+                                                                    dropdownValue,
+                                                                autofocus: true,
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .keyboard_arrow_down_sharp),
+                                                                // iconSize: 24,
+                                                                //elevation: 16,
+                                                                isExpanded:
+                                                                    true,
 
-                                                              onChanged: (String?
-                                                                  newValue) {
-                                                                setState(() {
-                                                                  dropdownValue =
-                                                                      newValue!;
-                                                                });
-                                                              },
-                                                              items: <String>[
-                                                                '-Select-',
-                                                                '2021-22',
-                                                                '2020-21',
-                                                                '2019-20',
-                                                              ].map<
-                                                                  DropdownMenuItem<
-                                                                      String>>((String
-                                                                  value) {
-                                                                return DropdownMenuItem<
-                                                                    String>(
-                                                                  value: value,
-                                                                  child: Text(
-                                                                      value),
-                                                                );
-                                                              }).toList(),
+                                                                onChanged: (String?
+                                                                    newValue) {
+                                                                  setState(() {
+                                                                    dropdownValue =
+                                                                        newValue!;
+                                                                  });
+                                                                },
+                                                                items: <String>[
+                                                                  '-Select-',
+                                                                  '2021-22',
+                                                                  '2020-21',
+                                                                  '2019-20',
+                                                                ].map<
+                                                                    DropdownMenuItem<
+                                                                        String>>((String
+                                                                    value) {
+                                                                  return DropdownMenuItem<
+                                                                      String>(
+                                                                    value:
+                                                                        value,
+                                                                    child: Text(
+                                                                        value),
+                                                                  );
+                                                                }).toList(),
+                                                              ),
                                                             ),
                                                           )),
                                                     ),
                                                     SizedBox(
-                                                      height: 5.5.h,
+                                                      height: 4.5.h,
                                                       child: Container(
-                                                        color: Colors.black12,
+                                                          // color: Colors.black12,
+                                                          ),
+                                                    ),
+                                                    Padding(
+                                                      padding: EdgeInsets.only(
+                                                          left: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width /
+                                                              90,
+                                                          right: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .width /
+                                                              90),
+                                                      child: Container(
+                                                        // color: Colors.black26,
+                                                        height: 5.5.h,
+                                                        child: Row(
+                                                          // mainAxisAlignment:
+                                                          //     MainAxisAlignment
+                                                          //         .spaceAround,
+                                                          children: [
+                                                            FlatButton(
+                                                                color: Colors
+                                                                    .lightBlueAccent,
+                                                                textColor:
+                                                                    Colors
+                                                                        .white,
+                                                                child: Text(
+                                                                  'Flat Button',
+                                                                ),
+                                                                onPressed: () =>
+                                                                    DashBoard()),
+                                                            SizedBox(
+                                                              width: 1.5.w,
+                                                            ),
+                                                            Container(
+                                                              height: 5.5.h,
+                                                              // color: Colors
+                                                              //     .black12,
+                                                              child: Align(
+                                                                alignment:
+                                                                    Alignment
+                                                                        .center,
+                                                                child: Text(
+                                                                  "Show",
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          14.sp),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width: 1.5.w,
+                                                            ),
+                                                            Container(
+                                                              height: 4.5.h,
+                                                              width: 20.w,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                gradient:
+                                                                    LinearGradient(
+                                                                        colors: [
+                                                                      Colors
+                                                                          .white,
+                                                                      Colors
+                                                                          .white,
+                                                                    ]),
+                                                                boxShadow: [
+                                                                  BoxShadow(
+                                                                    color: Colors
+                                                                        .black54,
+                                                                    offset:
+                                                                        const Offset(
+                                                                      0.0,
+                                                                      2.0,
+                                                                    ),
+                                                                    blurRadius:
+                                                                        1,
+                                                                    spreadRadius:
+                                                                        .25,
+                                                                  ), //BoxShadow
+                                                                  //BoxShadow
+                                                                ],
+                                                              ),
+                                                              // color: Colors
+                                                              //     .black12,
+                                                              child:
+                                                                  DropdownButtonHideUnderline(
+                                                                child:
+                                                                    DropdownButton<
+                                                                        String>(
+                                                                  value:
+                                                                      dropdownValue1,
+                                                                  autofocus:
+                                                                      true,
+                                                                  icon: const Icon(
+                                                                      Icons
+                                                                          .keyboard_arrow_down_sharp),
+                                                                  // iconSize: 24,
+                                                                  //elevation: 16,
+                                                                  isExpanded:
+                                                                      true,
+
+                                                                  onChanged:
+                                                                      (String?
+                                                                          newValue) {
+                                                                    setState(
+                                                                        () {
+                                                                      dropdownValue1 =
+                                                                          newValue!;
+                                                                    });
+                                                                  },
+                                                                  items: <
+                                                                      String>[
+                                                                    '10',
+                                                                    '25',
+                                                                    '50',
+                                                                  ].map<
+                                                                      DropdownMenuItem<
+                                                                          String>>((String
+                                                                      value) {
+                                                                    return DropdownMenuItem<
+                                                                        String>(
+                                                                      value:
+                                                                          value,
+                                                                      child: Text(
+                                                                          value),
+                                                                    );
+                                                                  }).toList(),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              width: 1.5.w,
+                                                            ),
+                                                            Container(
+                                                              height: 5.5.h,
+                                                              // color: Colors
+                                                              //     .black12,
+                                                              child: Align(
+                                                                alignment:
+                                                                    Alignment
+                                                                        .center,
+                                                                child: Text(
+                                                                  "Entries",
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          14.sp),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
+                                                    SizedBox(
+                                                      height: .5.h,
+                                                    ),
                                                     Container(
+                                                      width: 60.w,
+                                                      height: 4.5.h,
                                                       color: Colors.black26,
-                                                      height: 5.5.h,
-                                                      
-                                                    )
+                                                    ),
                                                   ],
                                                 ),
-                                              )
+                                              ),
                                             ],
                                           ),
                                         )

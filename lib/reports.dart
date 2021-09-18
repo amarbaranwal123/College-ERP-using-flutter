@@ -44,7 +44,7 @@ class Reports extends StatelessWidget {
                           height: 4.h,
                           width: 100.w,
                           child: Text(
-                            'My Profile',
+                            'Student Receipt Register',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 18.sp),
                           ),
@@ -90,12 +90,12 @@ class Reports extends StatelessWidget {
                                         title: Row(
                                           children: [
                                             Icon(
-                                              Icons.person_outline_sharp,
+                                              Icons.arrow_drop_down_outlined,
                                               color: Colors.white,
                                               size: 20,
                                             ),
                                             Text(
-                                              '  Personal Details',
+                                              '  Receipt Register',
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
@@ -107,7 +107,7 @@ class Reports extends StatelessWidget {
                                           Container(
                                             height: 60.h,
                                             width: 100.w,
-                                            color: Colors.white,
+                                            color: Colors.black,
                                             child: Stack(
                                               children: [
                                                 Center(

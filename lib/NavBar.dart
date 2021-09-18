@@ -19,7 +19,8 @@ class NavBar extends StatelessWidget {
         width: 60.w,
         child: Drawer(
           child: ListView(
-            padding: EdgeInsets.zero,
+            physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics()),
             children: [
               UserAccountsDrawerHeader(
                 accountName: Text('Amar Baranwalll'),
@@ -257,14 +258,22 @@ Route _createRoute15() {
 Widget _createDrawerItem(
     {required IconData icon, required String text, GestureTapCallback? onTap}) {
   return ListTile(
-    title: Row(
-      children: <Widget>[
-        Icon(icon),
-        Padding(
-          padding: EdgeInsets.only(left: 8.0),
-          child: Text(text),
-        )
-      ],
+    title: Container(
+      height: 5.h,
+      width: 40.h,
+      // color: Colors.pink,
+      child: Align(
+        alignment: Alignment.topLeft,
+        child: Row(
+          children: <Widget>[
+            Icon(icon),
+            Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(text),
+            )
+          ],
+        ),
+      ),
     ),
     onTap: onTap,
   );

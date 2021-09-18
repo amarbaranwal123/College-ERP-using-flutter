@@ -25,15 +25,9 @@ class _LoginState extends State<Login> {
               height: 96.5.h,
               width: 100.w,
               decoration: BoxDecoration(
-                gradient: new LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [0.4, 0.9],
-                  colors: [
-                    //Colors.purple.shade500,
-                    Colors.yellow.shade100,
-                    Colors.yellow.shade100,
-                  ],
+                image: new DecorationImage(
+                  image: new AssetImage("assets/image/loginback.png"),
+                  fit: BoxFit.fill,
                 ),
               ),
               child: Center(
@@ -60,9 +54,9 @@ class _LoginState extends State<Login> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Container(
-                                          height: 12.h,
-                                          width: 90.w,
-                                          //   color: Colors.lightBlue.shade100,
+                                          height: 8.h,
+                                          width: 50.w,
+                                          // color: Colors.lightBlue.shade100,
                                           decoration: BoxDecoration(
                                             image: new DecorationImage(
                                               image: new AssetImage(
@@ -170,35 +164,39 @@ class _LoginState extends State<Login> {
                                                                 .size
                                                                 .width /
                                                             30),
-                                                child: DropdownButton<String>(
-                                                  value: dropdownValue,
-                                                  autofocus: true,
-                                                  icon: const Icon(Icons
-                                                      .keyboard_arrow_down_sharp),
-                                                  // iconSize: 24,
-                                                  //elevation: 16,
-                                                  isExpanded: true,
+                                                child:
+                                                    DropdownButtonHideUnderline(
+                                                  child: DropdownButton<String>(
+                                                    value: dropdownValue,
+                                                    autofocus: true,
+                                                    icon: const Icon(Icons
+                                                        .keyboard_arrow_down_sharp),
+                                                    // iconSize: 24,
+                                                    //elevation: 16,
+                                                    isExpanded: true,
 
-                                                  onChanged:
-                                                      (String? newValue) {
-                                                    setState(() {
-                                                      dropdownValue = newValue!;
-                                                    });
-                                                  },
-                                                  items: <String>[
-                                                    'Faculty',
-                                                    'Student',
-                                                    'Parents',
-                                                  ].map<
-                                                          DropdownMenuItem<
-                                                              String>>(
-                                                      (String value) {
-                                                    return DropdownMenuItem<
-                                                        String>(
-                                                      value: value,
-                                                      child: Text(value),
-                                                    );
-                                                  }).toList(),
+                                                    onChanged:
+                                                        (String? newValue) {
+                                                      setState(() {
+                                                        dropdownValue =
+                                                            newValue!;
+                                                      });
+                                                    },
+                                                    items: <String>[
+                                                      'Faculty',
+                                                      'Student',
+                                                      'Parents',
+                                                    ].map<
+                                                            DropdownMenuItem<
+                                                                String>>(
+                                                        (String value) {
+                                                      return DropdownMenuItem<
+                                                          String>(
+                                                        value: value,
+                                                        child: Text(value),
+                                                      );
+                                                    }).toList(),
+                                                  ),
                                                 ))),
                                         Container(
                                             height: 5.h,

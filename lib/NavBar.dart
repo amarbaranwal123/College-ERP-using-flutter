@@ -1,6 +1,8 @@
 import 'package:erp/ApplicationForm.dart';
 import 'package:erp/DashBoard.dart';
 import 'package:erp/Login.dart';
+import 'package:erp/finepayment.dart';
+import 'package:erp/reports.dart';
 import 'package:erp/timetable.dart';
 
 import 'package:flutter/material.dart';
@@ -101,7 +103,14 @@ class NavBar extends StatelessWidget {
                 icon: Icons.flight_land_outlined,
                 text: 'Fine Payment',
                 onTap: () {
-                  Navigator.of(context).push(_createRoute1());
+                  Navigator.of(context).push(_createRoute14());
+                },
+              ),
+              _createDrawerItem(
+                icon: Icons.report_rounded,
+                text: 'Reports',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute13());
                 },
               ),
               _createDrawerItem(
@@ -176,6 +185,42 @@ Route _createRoute3() {
 Route _createRoute5() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => TimeTable(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute13() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Reports(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
+Route _createRoute14() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => FinePayment(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(-5.0, .0);
       const end = Offset.zero;

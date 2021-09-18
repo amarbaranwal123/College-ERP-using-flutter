@@ -1,4 +1,5 @@
 import 'package:erp/Login.dart';
+import 'package:erp/reports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
@@ -7,6 +8,7 @@ import 'ApplicationForm.dart';
 import 'DashBoard.dart';
 import 'Eresource.dart';
 import 'MyProfile.dart';
+import 'finepayment.dart';
 import 'timetable.dart';
 
 void main() => runApp(MyApp());
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
           routes: {
+            Reports.routeName: (ctx) => Reports(),
+            FinePayment.routeName: (ctx) => FinePayment(),
             TimeTable.routeName: (ctx) => TimeTable(),
             MyProfile.routeName: (ctx) => MyProfile(),
             DashBoard.routeName: (ctx) => DashBoard(),
@@ -28,16 +32,8 @@ class MyApp extends StatelessWidget {
             ApplicationForm.routeName: (ctx) => ApplicationForm(),
           },
           debugShowCheckedModeBanner: false,
-          home: TimeTable() // Eresourse() //Login() // MyProfile(),
+          home: Reports() //TimeTable() // Eresourse() //Login() // MyProfile(),
           );
     });
-    /* return MaterialApp(
-         // More() //Alcl() //, //HomeScreen(),
-        routes: {
-        /*SignupScreen.routeName: (ctx) => SignupScreen(),
-          LoginScreen.routeName: (ctx) => LoginScreen(),
-          HomeScreen.routeName: (ctx) => HomeScreen(),*/
-        // },
-        );*/
   }
 }

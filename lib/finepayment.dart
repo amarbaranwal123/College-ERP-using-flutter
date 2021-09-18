@@ -1,20 +1,20 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
 import 'dart:ui';
-import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'NavBar.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 
-class TimeTable extends StatefulWidget {
-  const TimeTable({Key? key}) : super(key: key);
-  static const routeName = '/TimeTable';
+class FinePayment extends StatefulWidget {
+  const FinePayment({Key? key}) : super(key: key);
+  static const routeName = '/FinaPayment';
   @override
-  State<TimeTable> createState() => _TimeTableState();
+  State<FinePayment> createState() => _FinePaymentState();
 }
 
-class _TimeTableState extends State<TimeTable> {
+class _FinePaymentState extends State<FinePayment> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -35,8 +35,7 @@ class _TimeTableState extends State<TimeTable> {
                     // color: Colors.black45,
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text(
-                          "Time-Table is not uploaded yet, Contact to your HOD"),
+                      child: Text("No Pending Dues !!"),
                     ),
                   ),
                 ),
@@ -109,7 +108,7 @@ class _TimeTableState extends State<TimeTable> {
                           width: 100.w,
                           // color: Colors.black,
                           child: Text(
-                            'Time Table',
+                            'Fine Payement',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 18.sp),
                           ),
@@ -124,7 +123,7 @@ class _TimeTableState extends State<TimeTable> {
                             bottom: MediaQuery.of(context).size.width / 30,
                           ),
                           child: Container(
-                            height: 78.h,
+                            height: 38.h,
                             width: 100.w,
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -159,7 +158,7 @@ class _TimeTableState extends State<TimeTable> {
                                         MediaQuery.of(context).size.width / 70,
                                   ),
                                   child: Container(
-                                    height: 76.45.h,
+                                    height: 36.45.h,
                                     width: 100.w,
                                     decoration: BoxDecoration(
                                         gradient: LinearGradient(

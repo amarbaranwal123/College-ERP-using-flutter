@@ -12,8 +12,14 @@ import 'package:sizer/sizer.dart';
 
 import 'Eresource.dart';
 import 'MyProfile.dart';
+import 'library.dart';
 
-class NavBar extends StatelessWidget {
+class NavBar extends StatefulWidget {
+  @override
+  State<NavBar> createState() => _NavBarState();
+}
+
+class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -110,6 +116,13 @@ class NavBar extends StatelessWidget {
                 },
               ),
               _createDrawerItem(
+                icon: Icons.copy_all_outlined,
+                text: 'Library',
+                onTap: () {
+                  Navigator.of(context).push(_createRoute12());
+                },
+              ),
+              _createDrawerItem(
                 icon: Icons.report_rounded,
                 text: 'Reports',
                 onTap: () {
@@ -129,6 +142,22 @@ class NavBar extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _createDrawerItem(
+    {required IconData icon, required String text, GestureTapCallback? onTap}) {
+  return ListTile(
+    title: Row(
+      children: <Widget>[
+        Icon(icon),
+        Padding(
+          padding: EdgeInsets.only(left: 8.0),
+          child: Text(text),
+        )
+      ],
+    ),
+    onTap: onTap,
+  );
 }
 
 Route _createRoute1() {
@@ -239,6 +268,24 @@ Route _createRoute6() {
   );
 }
 
+Route _createRoute12() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Library(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      const begin = Offset(-5.0, .0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
 Route _createRoute13() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Reports(),
@@ -290,29 +337,5 @@ Route _createRoute15() {
         child: child,
       );
     },
-  );
-}
-
-Widget _createDrawerItem(
-    {required IconData icon, required String text, GestureTapCallback? onTap}) {
-  return ListTile(
-    title: Container(
-      height: 5.h,
-      width: 40.h,
-      // color: Colors.pink,
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Row(
-          children: <Widget>[
-            Icon(icon),
-            Padding(
-              padding: EdgeInsets.only(left: 8.0),
-              child: Text(text),
-            )
-          ],
-        ),
-      ),
-    ),
-    onTap: onTap,
   );
 }

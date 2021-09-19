@@ -43,7 +43,7 @@ class _LibraryState extends State<Library> {
             child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 child: Container(
-                  height: 100.h,
+                  height: 197.h,
                   color: Colors.grey.shade300,
                   child: Center(
                     child: Padding(
@@ -54,18 +54,6 @@ class _LibraryState extends State<Library> {
                           top: MediaQuery.of(context).size.width / 30),
                       child: Column(
                         children: [
-                          Container(
-                            height: 4.h,
-                            width: 100.w,
-                            child: Text(
-                              ' Student Receipt Register',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 18.sp),
-                            ),
-                          ),
-                          SizedBox(
-                            height: .2.h,
-                          ),
                           Stack(children: [
                             Column(
                               children: [
@@ -87,14 +75,14 @@ class _LibraryState extends State<Library> {
                                           bottom: 0.5,
                                         ),
                                         title: Row(
-                                          // mainAxisAlignment:
-                                          //     MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
                                             SizedBox(
                                               width: 1.w,
                                             ),
                                             Text(
-                                              '  Receipt Register',
+                                              'New Arrivals',
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
@@ -116,15 +104,214 @@ class _LibraryState extends State<Library> {
                                             width: 100.w,
                                             color: Colors.white,
                                             child: Stack(
+                                              children: [],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ]),
+                          Stack(children: [
+                            Column(
+                              children: [
+                                Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                  ),
+                                  color: Colors.lightBlue.shade500,
+                                  child: SingleChildScrollView(
+                                    physics: BouncingScrollPhysics(),
+                                    child: Theme(
+                                      data: Theme.of(context).copyWith(
+                                          dividerColor: Colors.transparent),
+                                      child: ExpansionTile(
+                                        trailing: SizedBox.shrink(),
+                                        childrenPadding: EdgeInsets.only(
+                                          left: .25,
+                                          right: 0.25,
+                                          bottom: 0.5,
+                                        ),
+                                        title: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            SizedBox(
+                                              width: 1.w,
+                                            ),
+                                            Text(
+                                              'Due Register',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 17),
+                                            ),
+                                            SizedBox(
+                                              width: 34.w,
+                                            ),
+                                            Icon(
+                                              Icons.arrow_drop_down_outlined,
+                                              color: Colors.white,
+                                              size: 20,
+                                            ),
+                                          ],
+                                        ),
+                                        children: [
+                                          Container(
+                                            height: 40.h,
+                                            width: 100.w,
+                                            color: Colors.white,
+                                            child: Stack(
+                                              children: [],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ]),
+                          Stack(children: [
+                            Column(
+                              children: [
+                                Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                  ),
+                                  color: Colors.lightBlue.shade500,
+                                  child: SingleChildScrollView(
+                                    physics: BouncingScrollPhysics(),
+                                    child: Theme(
+                                      data: Theme.of(context).copyWith(
+                                          dividerColor: Colors.transparent),
+                                      child: ExpansionTile(
+                                        trailing: SizedBox.shrink(),
+                                        childrenPadding: EdgeInsets.only(
+                                          left: .25,
+                                          right: 0.25,
+                                          bottom: 0.5,
+                                        ),
+                                        title: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            SizedBox(
+                                              width: 1.w,
+                                            ),
+                                            Text(
+                                              'Institutional Repository',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 17),
+                                            ),
+                                            SizedBox(
+                                              width: 23.w,
+                                            ),
+                                            Icon(
+                                              Icons.arrow_drop_down_outlined,
+                                              color: Colors.white,
+                                              size: 20,
+                                            ),
+                                          ],
+                                        ),
+                                        children: [
+                                          Container(
+                                            height: 45.h,
+                                            width: 100.w,
+                                            color: Colors.white,
+                                            child: Stack(
                                               children: [
                                                 Padding(
                                                   padding: EdgeInsets.all(
                                                       MediaQuery.of(context)
                                                               .size
                                                               .width /
-                                                          90),
+                                                          50),
                                                   child: Column(
                                                     children: [
+                                                      Container(
+                                                        //color: Colors.black12,
+                                                        height: 2.5.h,
+                                                        child: Align(
+                                                          alignment:
+                                                              Alignment.topLeft,
+                                                          child: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                left: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    90,
+                                                                right: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    90),
+                                                            child: Text(
+                                                              "Course",
+                                                              style: TextStyle(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontSize:
+                                                                      14.sp),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding: EdgeInsets.only(
+                                                            left: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                90,
+                                                            right: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                90),
+                                                        child: Container(
+                                                          height: 5.h,
+                                                          width: 100.w,
+                                                          //color: Colors.black26,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            border: Border.all(
+                                                                color: Colors
+                                                                    .black26),
+                                                          ),
+                                                          child: Padding(
+                                                              padding:
+                                                                  EdgeInsets
+                                                                      .only(
+                                                                left: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    40,
+                                                              ),
+                                                              child: Align(
+                                                                alignment: Alignment
+                                                                    .centerLeft,
+                                                                child: Text(
+                                                                  "Masters of Computer Application",
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          12.5.sp),
+                                                                ),
+                                                              )),
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        height: .75.h,
+                                                      ),
                                                       Container(
                                                         //color: Colors.black12,
                                                         height: 2.5.h,
@@ -146,7 +333,7 @@ class _LibraryState extends State<Library> {
                                                             child: Row(
                                                               children: [
                                                                 Text(
-                                                                  "Select Academic Year",
+                                                                  "Subject",
                                                                   style: TextStyle(
                                                                       fontWeight:
                                                                           FontWeight
@@ -157,13 +344,13 @@ class _LibraryState extends State<Library> {
                                                                 Text(
                                                                   " *",
                                                                   style: TextStyle(
+                                                                      color: Colors
+                                                                          .red,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .bold,
                                                                       fontSize:
-                                                                          14.sp,
-                                                                      color: Colors
-                                                                          .red),
+                                                                          14.sp),
                                                                 ),
                                                               ],
                                                             ),
@@ -230,9 +417,9 @@ class _LibraryState extends State<Library> {
                                                                   items: <
                                                                       String>[
                                                                     '-Select-',
-                                                                    '2021-22',
-                                                                    '2020-21',
-                                                                    '2019-20',
+                                                                    'Subject 1',
+                                                                    'Subject 2',
+                                                                    'Subject 3',
                                                                   ].map<
                                                                       DropdownMenuItem<
                                                                           String>>((String
@@ -250,389 +437,348 @@ class _LibraryState extends State<Library> {
                                                             )),
                                                       ),
                                                       SizedBox(
-                                                        height: 4.5.h,
-                                                        child: Container(
-                                                            // color: Colors.black12,
-                                                            ),
-                                                      ),
-                                                      Padding(
-                                                        padding: EdgeInsets.only(
-                                                            left: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90,
-                                                            right: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90),
-                                                        child: Container(
-                                                          // color: Colors.black26,
-                                                          height: 5.5.h,
-                                                          child: Row(
-                                                            // mainAxisAlignment:
-                                                            //     MainAxisAlignment
-                                                            //         .spaceAround,
-                                                            children: [
-                                                              Container(
-                                                                height: 4.5.h,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  boxShadow: [
-                                                                    BoxShadow(
-                                                                      color: Colors
-                                                                          .black12,
-                                                                      offset:
-                                                                          const Offset(
-                                                                        3.0,
-                                                                        3.0,
-                                                                      ),
-                                                                      blurRadius:
-                                                                          1,
-                                                                      spreadRadius:
-                                                                          .05,
-                                                                    ), //BoxShadow
-                                                                    //BoxShadow
-                                                                  ],
-                                                                ),
-                                                                child:
-                                                                    FlatButton(
-                                                                        color: Colors
-                                                                            .lightBlueAccent,
-                                                                        textColor:
-                                                                            Colors
-                                                                                .white,
-                                                                        child:
-                                                                            Text(
-                                                                          'Display',
-                                                                        ),
-                                                                        onPressed:
-                                                                            () =>
-                                                                                DashBoard()),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 1.5.w,
-                                                              ),
-                                                              Container(
-                                                                height: 5.5.h,
-                                                                // color: Colors
-                                                                //     .black12,
-                                                                child: Align(
-                                                                  alignment:
-                                                                      Alignment
-                                                                          .center,
-                                                                  child: Text(
-                                                                    "Show",
-                                                                    style: TextStyle(
-                                                                        fontSize:
-                                                                            14.sp),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 1.5.w,
-                                                              ),
-                                                              Container(
-                                                                height: 4.5.h,
-                                                                width: 20.w,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  gradient:
-                                                                      LinearGradient(
-                                                                          colors: [
-                                                                        Colors
-                                                                            .white,
-                                                                        Colors
-                                                                            .white,
-                                                                      ]),
-                                                                  boxShadow: [
-                                                                    BoxShadow(
-                                                                      color: Colors
-                                                                          .black54,
-                                                                      offset:
-                                                                          const Offset(
-                                                                        0.0,
-                                                                        2.0,
-                                                                      ),
-                                                                      blurRadius:
-                                                                          1,
-                                                                      spreadRadius:
-                                                                          .25,
-                                                                    ), //BoxShadow
-                                                                    //BoxShadow
-                                                                  ],
-                                                                ),
-                                                                // color: Colors
-                                                                //     .black12,
-                                                                child:
-                                                                    DropdownButtonHideUnderline(
-                                                                  child:
-                                                                      DropdownButton<
-                                                                          String>(
-                                                                    value:
-                                                                        dropdownValue1,
-                                                                    autofocus:
-                                                                        true,
-                                                                    icon: const Icon(
-                                                                        Icons
-                                                                            .keyboard_arrow_down_sharp),
-                                                                    // iconSize: 24,
-                                                                    //elevation: 16,
-                                                                    isExpanded:
-                                                                        true,
-
-                                                                    onChanged:
-                                                                        (String?
-                                                                            newValue) {
-                                                                      setState(
-                                                                          () {
-                                                                        dropdownValue1 =
-                                                                            newValue!;
-                                                                      });
-                                                                    },
-                                                                    items: <
-                                                                        String>[
-                                                                      '10',
-                                                                      '25',
-                                                                      '50',
-                                                                    ].map<
-                                                                        DropdownMenuItem<
-                                                                            String>>((String
-                                                                        value) {
-                                                                      return DropdownMenuItem<
-                                                                          String>(
-                                                                        value:
-                                                                            value,
-                                                                        child: Text(
-                                                                            value),
-                                                                      );
-                                                                    }).toList(),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 1.5.w,
-                                                              ),
-                                                              Container(
-                                                                height: 5.5.h,
-                                                                // color: Colors
-                                                                //     .black12,
-                                                                child: Align(
-                                                                  alignment:
-                                                                      Alignment
-                                                                          .center,
-                                                                  child: Text(
-                                                                    "Entries",
-                                                                    style: TextStyle(
-                                                                        fontSize:
-                                                                            14.sp),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        height: .5.h,
+                                                        height: .75.h,
                                                       ),
                                                       Container(
-                                                        width: 60.w,
-                                                        height: 4.5.h,
-                                                        // color: Colors.black26,
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceBetween,
-                                                          children: [
-                                                            Text(
-                                                              "Search :",
-                                                              style: TextStyle(
-                                                                fontSize: 14.sp,
-                                                              ),
+                                                        //color: Colors.black12,
+                                                        height: 2.5.h,
+                                                        child: Align(
+                                                          alignment:
+                                                              Alignment.topLeft,
+                                                          child: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                left: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    90,
+                                                                right: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    90),
+                                                            child: Row(
+                                                              children: [
+                                                                Text(
+                                                                  "E-Content Type",
+                                                                  style: TextStyle(
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                      fontSize:
+                                                                          14.sp),
+                                                                ),
+                                                                Text(
+                                                                  " *",
+                                                                  style: TextStyle(
+                                                                      color: Colors
+                                                                          .red,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                      fontSize:
+                                                                          14.sp),
+                                                                ),
+                                                              ],
                                                             ),
-                                                            Container(
-                                                              //                color: Colors.black38,
-                                                              height: 5.25.h,
-                                                              width: 40.w,
-                                                              //  color:
-                                                              //        Colors.black12,
-                                                              child: Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    bottom: MediaQuery.of(context)
-                                                                            .size
-                                                                            .height /
-                                                                        99),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding: EdgeInsets.only(
+                                                            left: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                90,
+                                                            right: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                90),
+                                                        child: Container(
+                                                            height: 5.h,
+                                                            //color: Colors.black26,
+                                                            decoration: BoxDecoration(
+                                                                border: Border.all(
+                                                                    color: Colors
+                                                                        .black26)),
+                                                            child: Padding(
+                                                              padding: EdgeInsets.only(
+                                                                  left: MediaQuery.of(
+                                                                              context)
+                                                                          .size
+                                                                          .width /
+                                                                      15,
+                                                                  right: MediaQuery.of(
+                                                                              context)
+                                                                          .size
+                                                                          .width /
+                                                                      15),
+                                                              child:
+                                                                  DropdownButtonHideUnderline(
                                                                 child:
-                                                                    TextFormField(
-                                                                        decoration:
-                                                                            InputDecoration(
-                                                                  enabledBorder:
-                                                                      UnderlineInputBorder(
-                                                                    borderSide:
-                                                                        BorderSide(
-                                                                            color:
-                                                                                Colors.black38),
-                                                                  ),
-                                                                  focusedBorder:
-                                                                      UnderlineInputBorder(
-                                                                    borderSide:
-                                                                        BorderSide(
-                                                                            color:
-                                                                                Colors.lightBlueAccent),
-                                                                  ),
-                                                                  border:
-                                                                      UnderlineInputBorder(
-                                                                    borderSide:
-                                                                        BorderSide(
-                                                                            color:
-                                                                                Colors.black38),
-                                                                  ),
-                                                                )),
+                                                                    DropdownButton<
+                                                                        String>(
+                                                                  value:
+                                                                      dropdownValue,
+                                                                  autofocus:
+                                                                      true,
+                                                                  icon: const Icon(
+                                                                      Icons
+                                                                          .keyboard_arrow_down_sharp),
+                                                                  // iconSize: 24,
+                                                                  //elevation: 16,
+                                                                  isExpanded:
+                                                                      true,
+
+                                                                  onChanged:
+                                                                      (String?
+                                                                          newValue) {
+                                                                    setState(
+                                                                        () {
+                                                                      dropdownValue =
+                                                                          newValue!;
+                                                                    });
+                                                                  },
+                                                                  items: <
+                                                                      String>[
+                                                                    '-Select-',
+                                                                    'Question Paper',
+                                                                    'E-Books',
+                                                                  ].map<
+                                                                      DropdownMenuItem<
+                                                                          String>>((String
+                                                                      value) {
+                                                                    return DropdownMenuItem<
+                                                                        String>(
+                                                                      value:
+                                                                          value,
+                                                                      child: Text(
+                                                                          value),
+                                                                    );
+                                                                  }).toList(),
+                                                                ),
                                                               ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding: EdgeInsets.only(
-                                                            left: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90,
-                                                            right: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90),
-                                                        child: Container(
-                                                          height: 3.h,
-                                                          color: Colors
-                                                              .lightBlue
-                                                              .shade400,
-                                                        ),
+                                                            )),
                                                       ),
                                                       SizedBox(
-                                                        height: .2.h,
+                                                        height: .75.h,
                                                       ),
-                                                      Padding(
-                                                        padding: EdgeInsets.only(
-                                                            left: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90,
-                                                            right: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90),
-                                                        child: Container(
-                                                          height: 3.5.h,
-                                                          width: 100.w,
-                                                          color: Colors
-                                                              .lightBlue
-                                                              .shade200,
-                                                          child: Align(
-                                                            alignment: Alignment
-                                                                .centerLeft,
-                                                            child: Text(
-                                                              " No data available in table",
-                                                              style: TextStyle(
-                                                                  fontSize:
-                                                                      12.sp,
-                                                                  color: Colors
-                                                                      .black87),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        height: .5.h,
-                                                      ),
-                                                      Padding(
-                                                        padding: EdgeInsets.only(
-                                                            left: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90,
-                                                            right: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90),
-                                                        child: Container(
-                                                          height: 4.5.h,
-                                                          width: 100.w,
-                                                          //  color: Colors.white,
-                                                          child: Align(
-                                                            alignment: Alignment
-                                                                .center,
-                                                            child: Text(
-                                                              "Showing 0 to 0 of 0 entries..!!",
-                                                              style: TextStyle(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  fontSize:
-                                                                      12.sp,
-                                                                  color: Colors
-                                                                      .black54),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding: EdgeInsets.only(
-                                                            left: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90,
-                                                            right: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width /
-                                                                90),
-                                                        child: Container(
-                                                          height: 4.5.h,
-                                                          width: 100.w,
-                                                          // color: Colors.white,
-                                                          child: Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .spaceBetween,
-                                                            children: [
-                                                              TextButton(
-                                                                onPressed: null,
-                                                                child: Text(
-                                                                  "Previous",
+                                                      Container(
+                                                        //color: Colors.black12,
+                                                        height: 2.5.h,
+                                                        child: Align(
+                                                          alignment:
+                                                              Alignment.topLeft,
+                                                          child: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                left: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    90,
+                                                                right: MediaQuery.of(
+                                                                            context)
+                                                                        .size
+                                                                        .width /
+                                                                    90),
+                                                            child: Row(
+                                                              children: [
+                                                                Text(
+                                                                  "Academic Year",
                                                                   style: TextStyle(
                                                                       fontWeight:
                                                                           FontWeight
-                                                                              .bold),
+                                                                              .bold,
+                                                                      fontSize:
+                                                                          14.sp),
                                                                 ),
-                                                              ),
-                                                              TextButton(
-                                                                onPressed: null,
-                                                                child: Text(
-                                                                  "Next",
+                                                                Text(
+                                                                  " *",
                                                                   style: TextStyle(
+                                                                      color: Colors
+                                                                          .red,
                                                                       fontWeight:
                                                                           FontWeight
-                                                                              .bold),
+                                                                              .bold,
+                                                                      fontSize:
+                                                                          14.sp),
                                                                 ),
-                                                              ),
-                                                            ],
+                                                              ],
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
+                                                      Padding(
+                                                        padding: EdgeInsets.only(
+                                                            left: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                90,
+                                                            right: MediaQuery.of(
+                                                                        context)
+                                                                    .size
+                                                                    .width /
+                                                                90),
+                                                        child: Container(
+                                                            height: 5.h,
+                                                            //color: Colors.black26,
+                                                            decoration: BoxDecoration(
+                                                                border: Border.all(
+                                                                    color: Colors
+                                                                        .black26)),
+                                                            child: Padding(
+                                                              padding: EdgeInsets.only(
+                                                                  left: MediaQuery.of(
+                                                                              context)
+                                                                          .size
+                                                                          .width /
+                                                                      15,
+                                                                  right: MediaQuery.of(
+                                                                              context)
+                                                                          .size
+                                                                          .width /
+                                                                      15),
+                                                              child:
+                                                                  DropdownButtonHideUnderline(
+                                                                child:
+                                                                    DropdownButton<
+                                                                        String>(
+                                                                  value:
+                                                                      dropdownValue,
+                                                                  autofocus:
+                                                                      true,
+                                                                  icon: const Icon(
+                                                                      Icons
+                                                                          .keyboard_arrow_down_sharp),
+                                                                  // iconSize: 24,
+                                                                  //elevation: 16,
+                                                                  isExpanded:
+                                                                      true,
+
+                                                                  onChanged:
+                                                                      (String?
+                                                                          newValue) {
+                                                                    setState(
+                                                                        () {
+                                                                      dropdownValue =
+                                                                          newValue!;
+                                                                    });
+                                                                  },
+                                                                  items: <
+                                                                      String>[
+                                                                    '-Select-',
+                                                                  ].map<
+                                                                      DropdownMenuItem<
+                                                                          String>>((String
+                                                                      value) {
+                                                                    return DropdownMenuItem<
+                                                                        String>(
+                                                                      value:
+                                                                          value,
+                                                                      child: Text(
+                                                                          value),
+                                                                    );
+                                                                  }).toList(),
+                                                                ),
+                                                              ),
+                                                            )),
+                                                      ),
+                                                      SizedBox(
+                                                        height: 2.h,
+                                                      ),
+                                                      FlatButton(
+                                                          color: Colors
+                                                              .lightBlueAccent,
+                                                          textColor:
+                                                              Colors.white,
+                                                          child: Text(
+                                                            'Display',
+                                                          ),
+                                                          onPressed: () =>
+                                                              DashBoard()),
                                                     ],
                                                   ),
                                                 ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ]),
+                          Stack(children: [
+                            Column(
+                              children: [
+                                Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                  ),
+                                  color: Colors.lightBlue.shade500,
+                                  child: SingleChildScrollView(
+                                    physics: BouncingScrollPhysics(),
+                                    child: Theme(
+                                      data: Theme.of(context).copyWith(
+                                          dividerColor: Colors.transparent),
+                                      child: ExpansionTile(
+                                        trailing: SizedBox.shrink(),
+                                        childrenPadding: EdgeInsets.only(
+                                          left: .25,
+                                          right: 0.25,
+                                          bottom: 0.5,
+                                        ),
+                                        title: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            SizedBox(
+                                              width: 1.w,
+                                            ),
+                                            Text(
+                                              'Publications',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 17),
+                                            ),
+                                            SizedBox(
+                                              width: 34.w,
+                                            ),
+                                            Icon(
+                                              Icons.arrow_drop_down_outlined,
+                                              color: Colors.white,
+                                              size: 20,
+                                            ),
+                                          ],
+                                        ),
+                                        children: [
+                                          Container(
+                                            height: 40.h,
+                                            width: 100.w,
+                                            color: Colors.white,
+                                            child: Stack(
+                                              children: [
+                                                Center(
+                                                    child: Container(
+                                                  height: 5.h,
+                                                  width: 60.w,
+                                                  color: Colors.redAccent,
+                                                  child: Center(
+                                                    child: Text(
+                                                      "Error Could Not get Article !",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 12.sp),
+                                                    ),
+                                                  ),
+                                                ))
                                               ],
                                             ),
                                           )

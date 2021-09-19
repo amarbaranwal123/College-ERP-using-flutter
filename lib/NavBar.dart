@@ -52,89 +52,113 @@ class _NavBarState extends State<NavBar> {
                   ),
                 ),
               ),
-              _createDrawerItem(
-                icon: Icons.clear_all_rounded,
-                text: 'Dashboard',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute1());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.clear_all_rounded,
+                  text: 'Dashboard',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute1());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.person_outlined,
-                text: 'My Profile',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute2());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.person_outlined,
+                  text: 'My Profile',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute2());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.read_more,
-                text: 'E-Resources',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute3());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.read_more,
+                  text: 'E-Resources',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute3());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.admin_panel_settings_outlined,
-                text: 'Admission Form',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute4());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.admin_panel_settings_outlined,
+                  text: 'Admission Form',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute4());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.charging_station_outlined,
-                text: 'TimeTable',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute5());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.charging_station_outlined,
+                  text: 'TimeTable',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute5());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.holiday_village_outlined,
-                text: 'Holiday List',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute6());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.holiday_village_outlined,
+                  text: 'Holiday List',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute6());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.work_off_outlined,
-                text: 'Assignment',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute1());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.work_off_outlined,
+                  text: 'Assignment',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute1());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.flutter_dash_outlined,
-                text: 'Fees Payment',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute1());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.flutter_dash_outlined,
+                  text: 'Fees Payment',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute1());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.flight_land_outlined,
-                text: 'Fine Payment',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute14());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.flight_land_outlined,
+                  text: 'Fine Payment',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute14());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.copy_all_outlined,
-                text: 'Library',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute12());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.copy_all_outlined,
+                  text: 'Library',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute12());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.report_rounded,
-                text: 'Reports',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute13());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.report_rounded,
+                  text: 'Reports',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute13());
+                  },
+                ),
               ),
-              _createDrawerItem(
-                icon: Icons.keyboard_backspace_rounded,
-                text: 'Sign Out',
-                onTap: () {
-                  Navigator.of(context).push(_createRoute15());
-                },
+              Card(
+                child: _createDrawerItem(
+                  icon: Icons.keyboard_backspace_rounded,
+                  text: 'Sign Out',
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute15());
+                  },
+                ),
               ),
             ],
           ),

@@ -20,7 +20,14 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
+  late bool _color;
+
   @override
+  void initState() {
+    super.initState();
+    _color = true;
+  }
+
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
@@ -53,15 +60,21 @@ class _NavBarState extends State<NavBar> {
                 ),
               ),
               Card(
+                color: _color ? Colors.deepOrangeAccent : Colors.transparent,
                 child: _createDrawerItem(
                   icon: Icons.clear_all_rounded,
                   text: 'Dashboard',
                   onTap: () {
-                    Navigator.of(context).push(_createRoute1());
+                    setState(() {
+                      _color = !_color;
+                    });
+
+                    // Navigator.of(context).push(_createRoute1());
                   },
                 ),
               ),
               Card(
+                color: _color ? Colors.deepOrangeAccent : Colors.transparent,
                 child: _createDrawerItem(
                   icon: Icons.person_outlined,
                   text: 'My Profile',
@@ -103,6 +116,25 @@ class _NavBarState extends State<NavBar> {
                   text: 'Holiday List',
                   onTap: () {
                     Navigator.of(context).push(_createRoute6());
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  hoverColor: Colors.amberAccent,
+
+                  // selectedTileColor: Colors.black12,
+                  title: Row(
+                    children: <Widget>[
+                      Icon(Icons.work_off_outlined),
+                      Padding(
+                        padding: EdgeInsets.only(left: 8.0),
+                        child: Text("amar"),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.of(context).push(_createRoute1());
                   },
                 ),
               ),
@@ -152,6 +184,7 @@ class _NavBarState extends State<NavBar> {
                 ),
               ),
               Card(
+                color: Colors.black12,
                 child: _createDrawerItem(
                   icon: Icons.keyboard_backspace_rounded,
                   text: 'Sign Out',

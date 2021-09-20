@@ -1,4 +1,5 @@
 import 'package:erp/Login.dart';
+import 'package:erp/Practice.dart';
 import 'package:erp/holiday.dart';
 import 'package:erp/reports.dart';
 import 'package:flutter/material.dart';
